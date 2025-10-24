@@ -34,7 +34,7 @@ module.exports = function (eleventyConfig) {
   /* ----------------------------
    * ✅ IMAGE OPTIMIZATION (async)
    * ---------------------------- */
-  eleventyConfig.addNunjucksAsyncShortcode('image', async (src, alt, cls = '') => {
+  eleventyConfig.addShortcode('image', async (src, alt, cls = '') => {
     let metadata = await Image(src, {
       widths: [300, 600, 1200],
       formats: ['webp', 'jpeg'],
@@ -97,7 +97,7 @@ module.exports = function (eleventyConfig) {
       input: 'src',
       output: 'public',
     },
-    htmlTemplateEngine: 'njk',
-    markdownTemplateEngine: 'njk',
+    htmlTemplateEngine: 'liquid',
+    markdownTemplateEngine: 'liquid',
   };
 };
