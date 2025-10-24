@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: main # or "master" if your repo uses that
 
-media_folder: 'src/assets/img/blog' # where uploaded images are stored in repo
+media_folder: 'src/assets/img/blog' # where uploaded images are stored
 public_folder: '/assets/img/blog' # public URL path to images
 
 collections:
@@ -11,24 +11,28 @@ collections:
     label_singular: 'Blog Post'
     description: 'Manage all blog articles displayed on the site.'
     format: 'json'
-    file: 'src/_data/blog.json' # points to your JSON data file
-    fields:
-      - label: 'Title'
-        name: 'title'
-        widget: 'string'
-      - label: 'Posts'
-        name: 'posts'
-        widget: 'list'
+
+    files:
+      - file: 'src/_data/blog.json'
+        label: 'Blog Data'
+        name: 'blog'
         fields:
-          - { label: 'ID', name: 'id', widget: 'string' }
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Date', name: 'date', widget: 'datetime', format: 'MMMM DD, YYYY' }
-          - { label: 'Author', name: 'author', widget: 'string', default: 'Team ChemGuard' }
-          - { label: 'Image', name: 'image', widget: 'image' }
-          - label: 'Content'
-            name: 'content'
+          - label: 'Title'
+            name: 'title'
+            widget: 'string'
+          - label: 'Posts'
+            name: 'posts'
             widget: 'list'
-            field:
-              label: 'Paragraph'
-              name: 'paragraph'
-              widget: 'text'
+            fields:
+              - { label: 'ID', name: 'id', widget: 'string' }
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Date', name: 'date', widget: 'datetime', format: 'MMMM DD, YYYY' }
+              - { label: 'Author', name: 'author', widget: 'string', default: 'Team ChemGuard' }
+              - { label: 'Image', name: 'image', widget: 'image' }
+              - label: 'Content'
+                name: 'content'
+                widget: 'list'
+                field:
+                  label: 'Paragraph'
+                  name: 'paragraph'
+                  widget: 'text'
