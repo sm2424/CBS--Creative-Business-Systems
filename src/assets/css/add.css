@@ -716,3 +716,22 @@
   color: #5f687b !important;
   margin-right: 4px;
 }
+
+/* ===========================
+   Header.njk
+=========================== */
+
+/* Scrolling in drop-down menu We can offer  */
+.scrollable-submenu {
+  max-height: 230px; /* adjust height as needed */
+  overflow-y: auto;
+}
+
+/* Optional: add subtle scrollbar styling (modern browsers) */
+.scrollable-submenu::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollable-submenu::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+}
