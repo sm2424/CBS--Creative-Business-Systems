@@ -1,0 +1,102 @@
+---
+layout: layout.njk
+title: Industrial Flooring
+---
+
+<div class="page-title">
+  <div class="container d-lg-flex justify-content-between align-items-center">
+    <h1 class="mb-2 mb-lg-0">Industrial Flooring</h1>
+    <nav class="breadcrumbs">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/we-can-offer/">We Can Offer</a></li>
+        <li class="current">Industrial Flooring</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<section id="industrial-flooring" class="section light-background">
+  <div class="container" data-aos="fade-up">
+    <!-- Section Title -->
+    <div class="section-title">
+      <span>Industrial Flooring</span>
+      <h2>Industrial Flooring</h2>
+    </div>
+
+    <!-- 📋 Flooring Details -->
+    <div class="content mb-5" data-aos="fade-up" data-aos-delay="100">
+      <ol class="mb-4">
+        <li>Abrasion and chemical-resistant flooring for chemical and dyestuff units.</li>
+        <li>
+          3MM to 5MM high abrasion-resistant non-skid screeding for workshops, warehouses,
+          fabrication and engineering areas.
+        </li>
+        <li>Chemical-resistant flooring for battery units.</li>
+        <li>
+          1MM to 4MM self-leveling seamless flooring for:
+          <ul class="mt-2">
+            <li>Pharmaceutical companies.</li>
+            <li>Airports.</li>
+            <li>Hotels / Resorts.</li>
+            <li>Food process industries (Non-Toxic).</li>
+            <li>Computer rooms (Dust-free zones).</li>
+            <li>Assembling units.</li>
+            <li>Kota / Mandana - Stone joint filling and covering.</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+
+    <!-- 🎥 Video + Images in One Row -->
+    <p><strong>Base - Epoxy / Polyurethane</strong></p>
+    <div
+      class="row gy-4 text-center justify-content-center"
+      data-aos="zoom-in"
+      data-aos-delay="150"
+    >
+      <!-- 🎥 Video Thumbnail -->
+      <div class="col-md-3 col-sm-6 portfolio-item">
+        <a
+          href="{{ industrial-flooring.video.url }}"
+          class="glightbox"
+          data-gallery="industrial-flooring-gallery"
+        >
+          <div class="position-relative d-inline-block">
+            <img
+              src="{{ industrial-flooring.video.thumbnail }}"
+              alt="Industrial Flooring Video Thumbnail"
+              class="coating-img"
+            />
+            <div
+              class="play-button position-absolute top-50 start-50 translate-middle d-flex align-items-center justify-content-center"
+              style="width: 60px; height: 60px; border-radius: 50%; background: rgba(0, 0, 0, 0.5)"
+            >
+              <i class="bi bi-play-circle text-white fs-1"></i>
+            </div>
+          </div>
+        </a>
+        <h6 class="mt-2 fw-bold text-muted">{{ industrial-flooring.video.label }}</h6>
+      </div>
+
+      <!-- 🖼️ Images -->
+      {% for image in industrial-flooring.images %}
+      <div class="col-md-3 col-sm-6 portfolio-item">
+        <a href="{{ image.src }}" class="glightbox" data-gallery="industrial-flooring-gallery">
+          <img src="{{ image.src }}" alt="{{ image.title }}" class="coating-img" />
+        </a>
+        <h6 class="mt-2 fw-bold text-muted">{{ image.title }}</h6>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script>
+  const lightbox = GLightbox({
+    selector: '.glightbox',
+    touchNavigation: true,
+    loop: true,
+    autoplayVideos: true,
+  });
+</script>

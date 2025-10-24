@@ -1,0 +1,77 @@
+---
+layout: layout.njk
+title: Anti-Corrosive Coatings
+---
+
+<div class="page-title">
+  <div class="container d-lg-flex justify-content-between align-items-center">
+    <h1 class="mb-2 mb-lg-0">Anti-Corrosive Coatings</h1>
+    <nav class="breadcrumbs">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/we-can-offer/">We Can Offer</a></li>
+        <li class="current">Anti-Corrosive Coatings</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<section id="anti-corrosive" class="section light-background">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <span>Protective Coating Solutions</span>
+      <h2>Anti-Corrosive Coatings</h2>
+      <p>Explore various coating solutions for industrial and corrosive environments.</p>
+    </div>
+
+    {% for section in anti-corrosive.sections %}
+    <div class="content mb-5">
+      <h4 class="label-text">
+        <span class="number">{{ section.id }}.</span>
+        {{ section.title }}
+      </h4>
+
+      {% if section.applications %}
+      <ul class="mb-4">
+        {% for item in section.applications %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %} {% for galleryGroup in section.gallery %} {% if galleryGroup.items and
+      galleryGroup.items.length > 0 %} {% if galleryGroup.items.length > 2 %} {% assign colClass =
+      "4" %} {% else %} {% assign colClass = "6" %} {% endif %}
+
+      <div class="row gy-4 mb-4 text-center" data-aos="fade-up" data-aos-delay="100">
+        {% for image in galleryGroup.items %}
+        <div class="col-md-{{ colClass }} col-sm-6 portfolio-item">
+          <a
+            href="{{ image.img }}"
+            class="glightbox"
+            data-gallery="{{ galleryGroup.group }}"
+            title="{{ image.title }}"
+          >
+            <img src="{{ image.img }}" class="img-fluid coating-img" alt="{{ image.title }}" />
+          </a>
+          <h6 class="mt-2 fw-bold text-muted">{{ image.title }}</h6>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %} {% endfor %} {% if section.base or section.type %}
+      <p class="fw-semibold text-muted mb-5">
+        {% if section.base %}
+        <strong>Base:</strong>
+        {{ section.base }}
+        <br />
+        {% endif %} {% if section.type %}
+        <strong>Type:</strong>
+        {{ section.type }}{% endif %}
+      </p>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<script>
+  const lightbox = GLightbox({ selector: '.glightbox' });
+</script>

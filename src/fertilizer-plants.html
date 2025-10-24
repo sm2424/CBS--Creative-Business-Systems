@@ -1,0 +1,48 @@
+---
+layout: layout.njk
+title: Fertilizer Plants Coating
+---
+
+<div class="page-title">
+  <div class="container d-lg-flex justify-content-between align-items-center">
+    <h1 class="mb-2 mb-lg-0">Fertilizer Plants Coating</h1>
+    <nav class="breadcrumbs">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/we-can-offer/">We Can Offer</a></li>
+        <li class="current">Fertilizer Plants Coating</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<section id="fertilizer" class="section light-background">
+  <div class="container" data-aos="fade-up">
+    <!-- Section Title -->
+    <div class="section-title">
+      <span>{{ fertilizer-plants.title }}</span>
+      <h2>{{ fertilizer-plants.title }}</h2>
+      <p>{{ fertilizer-plants.description }}</p>
+    </div>
+
+    <!-- 🖼️ Image Gallery -->
+    <div class="row gy-4 text-center" data-aos="zoom-in" data-aos-delay="100">
+      {% for image in fertilizer-plants.images %}
+      <div class="col-md-4 col-sm-6 portfolio-item">
+        <a href="{{ image.url }}" class="glightbox" data-gallery="fertilizer-gallery">
+          <img src="{{ image.url }}" alt="{{ image.caption }}" class="coating-img" />
+        </a>
+        <h6 class="mt-2 fw-bold text-muted">{{ image.caption }}</h6>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script>
+  const lightbox = GLightbox({
+    selector: '.glightbox',
+    touchNavigation: true,
+    loop: true,
+  });
+</script>

@@ -1,0 +1,47 @@
+---
+layout: layout.njk
+title: Tile Grouting
+---
+
+<div class="page-title">
+  <div class="container d-lg-flex justify-content-between align-items-center">
+    <h1 class="mb-2 mb-lg-0">Tile Grouting</h1>
+    <nav class="breadcrumbs">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/we-can-offer/">We Can Offer</a></li>
+        <li class="current">Tile Grouting</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<section id="tile-grouting" class="section light-background">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <span>{{ tile-grouting.title }}</span>
+      <h2>{{ tile-grouting.title }}</h2>
+      <p>{{ tile-grouting.description }}</p>
+    </div>
+
+    <!-- 🖼️ Image Gallery -->
+    <div class="row gy-4 text-center" data-aos="zoom-in" data-aos-delay="100">
+      {% for image in tile-grouting.images %}
+      <div class="col-md-4 col-sm-6 portfolio-item">
+        <a href="{{ image.src }}" class="glightbox" data-gallery="tile-grouting-gallery">
+          <img src="{{ image.src }}" alt="Tile Grouting Image" class="coating-img" />
+        </a>
+        <h6 class="mt-2 fw-bold text-muted">{{ image.title }}</h6>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script>
+  const lightbox = GLightbox({
+    selector: '.glightbox',
+    touchNavigation: true,
+    loop: true,
+  });
+</script>

@@ -1,0 +1,22 @@
+{
+  "title": "Bituminous Coating",
+  "description": "Protective bituminous coating designed for waterproofing and corrosion resistance across industrial and structural applications.",
+  "images": [
+    {
+      "url": "/assets/img/gallery/4.webp",
+      "caption": "Surface Preparation"
+    },
+    {
+      "url": "/assets/img/gallery/18.webp",
+      "caption": "Application Process"
+    },
+    {
+      "url": "/assets/img/gallery/12.webp",
+      "caption": "After Coating"
+    },
+    {
+      "url": "/assets/img/gallery/10.webp",
+      "caption": "Finished Surface"
+    }
+  ]
+}

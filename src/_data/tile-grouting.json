@@ -1,0 +1,18 @@
+{
+  "title": "Tile Grouting",
+  "description": "High-quality tile joint filling and sealing solutions for industrial and commercial surfaces.",
+  "images": [
+    {
+      "src": "/assets/img/tile-grouting-1.jpeg",
+      "title": "Before"
+    },
+    {
+      "src": "/assets/img/tile-grouting-2.jpeg",
+      "title": "In Progess"
+    },
+    {
+      "src": "/assets/img/tile-grouting-3.jpeg",
+      "title": "After"
+    }
+  ]
+}

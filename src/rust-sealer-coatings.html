@@ -1,0 +1,83 @@
+---
+layout: layout.njk
+title: Rust Sealer & Rust Preventive Coatings
+---
+
+<div class="page-title">
+  <div class="container d-lg-flex justify-content-between align-items-center">
+    <h1 class="mb-2 mb-lg-0">{{ rust-sealer-coatings.title }}</h1>
+    <nav class="breadcrumbs">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/we-can-offer/">We Can Offer</a></li>
+        <li class="current">{{ rust-sealer-coatings.title }}</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<section id="rust-sealer" class="section light-background">
+  <div class="container" data-aos="fade-up">
+    {% for section in rust-sealer-coatings.sections %}
+    <div class="section-title mb-4">
+      <span>{{ section.name }}</span>
+      <h2>{{ section.name }}</h2>
+    </div>
+
+    <div class="row gy-4 text-center" data-aos="zoom-in" data-aos-delay="100">
+      {% for image in section.images %}
+      <div class="col-md-6 col-sm-6 portfolio-item">
+        <a href="{{ image.url }}" class="glightbox" data-gallery="{{ section.name | slug }}">
+          <img src="{{ image.url }}" alt="{{ image.title }}" class="coating-img" />
+        </a>
+        <h6 class="mt-2 fw-bold text-muted">{{ image.title }}</h6>
+      </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+
+    <!-- 🧰 Equipments Section -->
+    <div class="equipment-section mt-5" data-aos="fade-up" data-aos-delay="150">
+      <h3>Equipments we Use....</h3>
+      <p>
+        In view of the above said network we have big manpower to execute any major job in a
+        scheduled time at a very intricate corner of the country.
+      </p>
+      <p>We have the range of equipments to operate the system as listed below.</p>
+
+      <ul>
+        <li>Air Compressor 2.5 HP to 90 HP using either electrically or Diesel operated.</li>
+        <li>Air sprayed gun</li>
+        <li>Electrically operated hand grinders</li>
+        <li>Air Blowers - for Cleaning</li>
+        <li>Grinders</li>
+        <li>Airless guns</li>
+        <li>Pipe & Bamboo scape holding</li>
+        <li>Electrical boards, extensions</li>
+        <li>Paint mixer & stirrer</li>
+        <li>Vibrators</li>
+        <li>Hammers, chippers, wire brush, scrapers etc.</li>
+        <li>Tools & tackers</li>
+        <li>Online testing equipments</li>
+        <li>Weighing scale</li>
+        <li>Safety belts</li>
+        <li>Safety equipments</li>
+      </ul>
+
+      <h4 class="mt-4">Consulting System:</h4>
+      <p>
+        Furnished with a team of highly experienced consultants in various fields of businesses to
+        cater to the ultimate scheduled and targeted results, succeeding in a very intricate fashion
+        within the walls of furnished Research and Development departments.
+      </p>
+    </div>
+  </div>
+</section>
+
+<script>
+  const lightbox = GLightbox({
+    selector: '.glightbox',
+    touchNavigation: true,
+    loop: true,
+  });
+</script>

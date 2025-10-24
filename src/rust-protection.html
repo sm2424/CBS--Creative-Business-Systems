@@ -1,0 +1,103 @@
+---
+layout: layout.njk
+title: Rust Protection Solutions
+---
+
+<section id="rust-protection" class="rust-protection section">
+  <div class="container section-title" data-aos="fade-up">
+    <span>Corrosion Prevention</span>
+    <h2>Corrosion Prevention</h2>
+  </div>
+
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
+        <div class="team-strength">
+          <p>
+            Corrosion is a natural process — a degradation of metal when oxygen comes in contact
+            with MS or multi-metal surfaces. Preventing it at an early stage increases product life
+            and reduces surface preparation and labour costs.
+          </p>
+
+          <p>
+            Every final equipment or machine requires time between 2 to 60 days. We manufacture
+            various types of rust preventives — water-based, solvent-based, and oil-based — solving
+            rusting issues during assembly, transportation, installation, storage, machining, and
+            packing.
+          </p>
+
+          <p>
+            Our water-based corrosion-resistant materials offer rust prevention from 15 days to 20
+            years — the result of 25 years of research, teamwork, and over 2200 laboratory tests.
+          </p>
+
+          <p>This is the most cost-effective and performance-based solution.</p>
+
+          <p class="highlight">We offer a large variety of corrosion prevention solutions.</p>
+        </div>
+      </div>
+      <div
+        class="col-lg-6 position-relative align-self-start"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        <div class="coating-images" data-aos="fade-up" data-aos-delay="200">
+          <img
+            class="coating-image"
+            src="/assets/img/cross-section-of-submersiblepump.webp"
+            alt="Rust Coating Diagram"
+            title="🔍 Click to view in full size"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Coating Types Section -->
+<section id="pdf-viewer" class="pdf-viewer section">
+  <div class="container pdf-viewer-list" data-aos="fade-up" data-aos-delay="100">
+    <div class="pdf-card">
+      <div class="pdf-card-header" onclick="toggleCard(this)">
+        <h3>Types of Coatings (Click for Details)</h3>
+        <span class="toggle-icon">+</span>
+      </div>
+
+      <div class="pdf-card-content">
+        {% for pdf in types-of-coatings %}
+        <div class="pdf-item" onclick="openPDF(event, '{{ pdf.file }}', '{{ pdf.title }}')">
+          <img src="/assets/img/pdf-icon-2.png" alt="PDF Icon" class="pdf-icon" />
+          <strong>{{ pdf.title }}</strong>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  {% include "pdf-modal.njk" %} {% include "image-modal.njk" %}
+</section>
+
+<section id="portfolio" class="portfolio section product-applications">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <span>Product Applications</span>
+    <h2>Product Applications</h2>
+  </div>
+
+  <div class="container">
+    <div class="row gy-4" data-aos="fade-up" data-aos-delay="200">
+      {% for card in product-application %}
+      <div class="col-lg-4 col-md-6 portfolio-item">
+        <img src="{{ card.image }}" class="img-fluid shade-img" alt="{{ card.title }}" />
+        <div class="portfolio-info">
+          <h4>{{ card.title }}</h4>
+          <p>{{ card.description }}</p>
+          <a href="{{ card.image }}" title="{{ card.title }}" class="glightbox preview-link">
+            <i class="bi bi-zoom-in"></i>
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

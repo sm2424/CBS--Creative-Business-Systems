@@ -1,0 +1,21 @@
+{
+  "video": {
+    "url": "/assets/video/industrial-flooring-before.mp4",
+    "thumbnail": "/assets/img/industrial-flooring-before-thumbnail.webp",
+    "label": "Before"
+  },
+  "images": [
+    {
+      "src": "/assets/img/industrial-flooring-1.webp",
+      "title": "After - Area 1"
+    },
+    {
+      "src": "/assets/img/industrial-flooring-2.webp",
+      "title": "After - Area 2"
+    },
+    {
+      "src": "/assets/img/industrial-flooring-3.webp",
+      "title": "After - Area 3"
+    }
+  ]
+}

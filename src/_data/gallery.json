@@ -1,0 +1,466 @@
+[
+  {
+    "title": "10",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/10.webp",
+    "filter": "filter-app",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "12",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/12.webp",
+    "filter": "filter-product",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "18",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/18.webp",
+    "filter": "filter-branding",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "20141216 105912",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/20141216_105912.webp",
+    "filter": "filter-books",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "20150306 103011",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/20150306_103011.webp",
+    "filter": "filter-app",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "20150306 110116",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/20150306_110116.webp",
+    "filter": "filter-product",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "20150317 141529",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/20150317_141529.webp",
+    "filter": "filter-branding",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "20150317 142541",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/20150317_142541.webp",
+    "filter": "filter-books",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "20150402 103314",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/20150402_103314.webp",
+    "filter": "filter-app",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "20150601 150302",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/20150601_150302.webp",
+    "filter": "filter-product",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "20150601 170336",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/20150601_170336.webp",
+    "filter": "filter-branding",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "4",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/4.webp",
+    "filter": "filter-books",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "6e20ba03e3c12bebb09a7e2f8ae70bb9 edited",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/6e20ba03e3c12bebb09a7e2f8ae70bb9_edited_.webp",
+    "filter": "filter-app",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "AFFLUENT1",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/AFFLUENT1.webp",
+    "filter": "filter-product",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "AFFLUENT2",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/AFFLUENT2.webp",
+    "filter": "filter-branding",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "AFFLUENT3",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/AFFLUENT3.webp",
+    "filter": "filter-books",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "AFFLUENT",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/AFFLUENT.webp",
+    "filter": "filter-app",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "chain-4239167 1920",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/chain-4239167_1920.webp",
+    "filter": "filter-product",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "CHEMICAL1",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/CHEMICAL1.webp",
+    "filter": "filter-branding",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "CHEMICAL2",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/CHEMICAL2.webp",
+    "filter": "filter-books",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "CHEMICAL3",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/CHEMICAL3.webp",
+    "filter": "filter-app",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "CHEMICAL4",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/CHEMICAL4.webp",
+    "filter": "filter-product",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "CHEMICAL",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/CHEMICAL.webp",
+    "filter": "filter-branding",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "DSC00138 JPG",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/DSC00138_JPG.webp",
+    "filter": "filter-books",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "ffb17b 0be0f8065b94495cbe6e177dad93f69a mv2",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/ffb17b_0be0f8065b94495cbe6e177dad93f69a~mv2.webp",
+    "filter": "filter-app",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "ffb17b 0c7450e39db74b558bd911683382a9fe mv2",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/ffb17b_0c7450e39db74b558bd911683382a9fe~mv2.webp",
+    "filter": "filter-product",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "ffb17b 0d73c1d0632c4a80b731602177fd06c3 mv2",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/ffb17b_0d73c1d0632c4a80b731602177fd06c3~mv2.webp",
+    "filter": "filter-branding",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "ffb17b 0fe50b518e8745afb43cb1abb6fc8cba mv2",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/ffb17b_0fe50b518e8745afb43cb1abb6fc8cba~mv2.webp",
+    "filter": "filter-books",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "ffb17b 1e893611bbeb4d65ae7a45ccadc7e1fa mv2",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/ffb17b_1e893611bbeb4d65ae7a45ccadc7e1fa~mv2.webp",
+    "filter": "filter-app",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "ffb17b 2c2d61df8c5744b8a322a748996a40d6 mv2",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/ffb17b_2c2d61df8c5744b8a322a748996a40d6~mv2.webp",
+    "filter": "filter-product",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "ffb17b 2c4641a120024072acf5c5ac9de34f9b mv2",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/ffb17b_2c4641a120024072acf5c5ac9de34f9b~mv2.webp",
+    "filter": "filter-branding",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "ffb17b 3467d59ffbfb40b88940eb62bd204f79 mv2",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/ffb17b_3467d59ffbfb40b88940eb62bd204f79~mv2.webp",
+    "filter": "filter-books",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "ffb17b 550a2d0778a243a68961206566aad85c mv2",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/ffb17b_550a2d0778a243a68961206566aad85c~mv2.webp",
+    "filter": "filter-app",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "ffb17b 57e43b64511e4d11a34bdc6087051dd1 mv2",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/ffb17b_57e43b64511e4d11a34bdc6087051dd1~mv2.webp",
+    "filter": "filter-product",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "ffb17b 6488332523294ebf92f430ee9259658d mv2",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/ffb17b_6488332523294ebf92f430ee9259658d~mv2.webp",
+    "filter": "filter-branding",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "ffb17b 8b5aafcd1393442dbcb05429996d8ef5 mv2",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/ffb17b_8b5aafcd1393442dbcb05429996d8ef5~mv2.webp",
+    "filter": "filter-books",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "ffb17b 981066d1287447aaa37cef21e0342403 mv2",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/ffb17b_981066d1287447aaa37cef21e0342403~mv2.webp",
+    "filter": "filter-app",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "ffb17b 9ac03908796943a29af35e10ee9df9c0 mv2",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/ffb17b_9ac03908796943a29af35e10ee9df9c0~mv2.webp",
+    "filter": "filter-product",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "ffb17b a26e26f76780430fb16ab23b421eb827 mv2",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/ffb17b_a26e26f76780430fb16ab23b421eb827~mv2.webp",
+    "filter": "filter-branding",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "ffb17b b440be8a70d84719bfca9b7180e4c660 mv2",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/ffb17b_b440be8a70d84719bfca9b7180e4c660~mv2.webp",
+    "filter": "filter-books",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "ffb17b b589e74255cb45c7b148015191b64d98 mv2",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/ffb17b_b589e74255cb45c7b148015191b64d98~mv2.webp",
+    "filter": "filter-app",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "ffb17b bc275e780690409cb030457353542c0a mv2",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/ffb17b_bc275e780690409cb030457353542c0a~mv2.webp",
+    "filter": "filter-product",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "ffb17b bdb7c9e95da147f6b1d6bfc4db844eed mv2",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/ffb17b_bdb7c9e95da147f6b1d6bfc4db844eed~mv2.webp",
+    "filter": "filter-branding",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "ffb17b c169cbf4a09a4eb1b73291f9d1f3da84 mv2",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/ffb17b_c169cbf4a09a4eb1b73291f9d1f3da84~mv2.webp",
+    "filter": "filter-books",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "ffb17b cbb95faeaed0455f9e1ecd3ab19e741e mv2",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/ffb17b_cbb95faeaed0455f9e1ecd3ab19e741e~mv2.webp",
+    "filter": "filter-app",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "ffb17b cf582cebbe5b4fcbac2e71c7562b5530 mv2",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/ffb17b_cf582cebbe5b4fcbac2e71c7562b5530~mv2.webp",
+    "filter": "filter-product",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "ffb17b d0be46a36adf4620b4f448ff4132de20 mv2",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/ffb17b_d0be46a36adf4620b4f448ff4132de20~mv2.webp",
+    "filter": "filter-branding",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "ffb17b eae9b66c96624240ae756c13f6f25166 mv2",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/ffb17b_eae9b66c96624240ae756c13f6f25166~mv2.webp",
+    "filter": "filter-books",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "ffb17b fa69aef800004269928de24eceeeac44 mv2",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/ffb17b_fa69aef800004269928de24eceeeac44~mv2.webp",
+    "filter": "filter-app",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "ffb17b fd0bcfd0660c4e82b7ab32b0fdf61b8b mv2",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/ffb17b_fd0bcfd0660c4e82b7ab32b0fdf61b8b~mv2.webp",
+    "filter": "filter-product",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "ffb17b ff341e59a939448385fb64c200953713 mv2",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/ffb17b_ff341e59a939448385fb64c200953713~mv2.webp",
+    "filter": "filter-branding",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "FLOORING",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/FLOORING.webp",
+    "filter": "filter-books",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "FLOORING JPG",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/FLOORING_JPG.webp",
+    "filter": "filter-app",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "health-concerns-with-paints",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/health-concerns-with-paints.webp",
+    "filter": "filter-product",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "IMG-20150326-WA0004 edited edited",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/IMG-20150326-WA0004_edited_edited.webp",
+    "filter": "filter-branding",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "IMG-20160523-WA0032",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/IMG-20160523-WA0032.webp",
+    "filter": "filter-books",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "photo pipeline",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/photo-pipeline.webp",
+    "filter": "filter-app",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  },
+  {
+    "title": "Photograph(48)",
+    "description": "Lorem ipsum, dolor sit amet consectetur",
+    "image": "/assets/img/gallery/Photograph(48).webp",
+    "filter": "filter-product",
+    "gallery": "portfolio-gallery-app",
+    "detailsUrl": "portfolio-details.html"
+  }
+]

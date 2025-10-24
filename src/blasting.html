@@ -1,0 +1,61 @@
+---
+layout: layout.njk
+title: Blasting
+---
+
+<div class="page-title">
+  <div class="container d-lg-flex justify-content-between align-items-center">
+    <h1 class="mb-2 mb-lg-0">Blasting</h1>
+    <nav class="breadcrumbs">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/we-can-offer/">We Can Offer</a></li>
+        <li class="current">Blasting</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<section id="blasting" class="section light-background">
+  <div class="container" data-aos="fade-up">
+    <!-- Section Title -->
+    <div class="section-title">
+      <span>Surface Preparation</span>
+      <h2>Blasting</h2>
+      <p>
+        It is very genuine to do the surface preparation by the way of sand blasting at quality
+        grade of
+        <strong>SA 2 1/2</strong>
+        and then immediately the coating process may be applied. Blasting can be done as per
+        <strong>SA 1, SA 2, SA 2 1/2</strong>
+        and
+        <strong>SA 3 (White)</strong>
+        .
+      </p>
+    </div>
+
+    <!-- 🖼️ Image Gallery -->
+    <div
+      class="row gy-4 text-center justify-content-center"
+      data-aos="zoom-in"
+      data-aos-delay="150"
+    >
+      {% for image in blasting.images %}
+      <div class="col-md-3 col-sm-6 portfolio-item">
+        <a href="{{ image.src }}" class="glightbox" data-gallery="blasting-gallery">
+          <img src="{{ image.src }}" alt="{{ image.title }}" class="coating-img" />
+        </a>
+        <h6 class="mt-2 fw-bold text-muted">{{ image.title }}</h6>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script>
+  const lightbox = GLightbox({
+    selector: '.glightbox',
+    touchNavigation: true,
+    loop: true,
+  });
+</script>

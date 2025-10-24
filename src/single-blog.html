@@ -1,0 +1,116 @@
+---
+layout: layout.njk
+pagination:
+  data: blog.posts
+  size: 1
+  alias: post
+permalink: 'blog/{{ post.id }}/index.html'
+---
+
+<div class="page-title">
+  <div class="container d-lg-flex justify-content-between align-items-center">
+    <h1 class="mb-2 mb-lg-0">{{ post.title }}</h1>
+    <nav class="breadcrumbs">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li class="current">{{ post.title }}</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<section id="single-blog" class="section light-background">
+  <div class="container" data-aos="fade-up">
+    <!-- 🖼️ Blog Image -->
+    <div class="text-center mb-4">
+      <img
+        src="{{ post.image }}"
+        alt="{{ post.title }}"
+        class="img-fluid rounded shadow-sm mb-3"
+        style="max-height: 400px; object-fit: cover"
+      />
+      <p class="text-muted small">{{ post.date }} | {{ post.author }}</p>
+    </div>
+
+    <!-- 📝 Blog Content -->
+    <div class="blog-content">
+      {% for paragraph in post.content %}
+      <p>{{ paragraph }}</p>
+      {% endfor %}
+    </div>
+
+    <!-- 🧭 Navigation -->
+    <div
+      class="blog-navigation d-flex justify-content-between align-items-center mt-5 pt-4 border-top"
+    >
+      {% if pagination.href.previous %}
+      <a href="{{ pagination.href.previous }}" class="btn btn-outline-primary">← Previous</a>
+      {% else %}
+      <span></span>
+      {% endif %}
+
+      <a href="/blog/" class="btn btn-secondary">All Blogs</a>
+
+      {% if pagination.href.next %}
+      <a href="{{ pagination.href.next }}" class="btn btn-outline-primary">Next →</a>
+      {% else %}
+      <span></span>
+      {% endif %}
+    </div>
+
+    <!-- 📰 Related Posts -->
+    <div class="related-posts mt-5 pt-5 border-top" data-aos="fade-up" data-aos-delay="200">
+      <h3 class="text-center mb-4">Related Posts</h3>
+      <div class="row gy-4">
+        {% assign otherPosts = blog.posts | where: "id", post.id, true %} {% assign related =
+        blog.posts | where: "id", post.id, false | sample: 3 %} {% for relatedPost in related %}
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <a href="/blog/{{ relatedPost.id }}/">
+              <img
+                src="{{ relatedPost.image }}"
+                alt="{{ relatedPost.title }}"
+                class="card-img-top"
+                style="height: 200px; object-fit: cover"
+              />
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">{{ relatedPost.title }}</h5>
+              <p class="card-text text-muted small">
+                {{ relatedPost.date }} — {{ relatedPost.author }}
+              </p>
+              <p class="card-text">{{ relatedPost.content[0] | truncate: 120 }}</p>
+              <a href="/blog/{{ relatedPost.id }}/" class="btn btn-sm btn-outline-primary">
+                Read More →
+              </a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .blog-content p {
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+  .related-posts h3 {
+    font-weight: 700;
+    color: #333;
+  }
+  .related-posts .card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .related-posts .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+  .blog-navigation .btn {
+    min-width: 120px;
+  }
+</style>

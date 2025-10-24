@@ -1,0 +1,29 @@
+---
+layout: layout.njk
+title: Our Blog
+---
+
+<section id="blog" class="blog section">
+  <div class="container section-title" data-aos="fade-up">
+    <span>Blog</span>
+    <h2>{{ blog.title }}</h2>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row gy-4">
+      {% for post in blog.posts %}
+      <div class="col-lg-4 col-md-6">
+        <div class="card shadow-sm h-100">
+          <img src="{{ post.image }}" class="card-img-top" alt="{{ post.title }}" />
+          <div class="card-body">
+            <h5 class="card-title">{{ post.title }}</h5>
+            <p class="text-muted small mb-1">{{ post.date }} — {{ post.author }}</p>
+            <p class="card-text">{{ post.content[0] | truncate: 100 }}</p>
+            <a href="/blog/{{ post.id }}/" class="btn btn-primary btn-sm mt-2">Read More</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

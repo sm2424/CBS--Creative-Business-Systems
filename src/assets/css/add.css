@@ -1,0 +1,718 @@
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(145deg, #25d366, #1ebe57);
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25), inset 0 -4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  /* new: center icon with flex */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.float:hover {
+  transform: scale(1.1);
+}
+
+.float:active {
+  transform: scale(0.95);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25), inset 0 -2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.my-float {
+  /* no margin needed now */
+  transition: color 0.3s ease;
+}
+
+.float:hover .my-float {
+  color: #fff;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  /* tablets */
+  .float {
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* desktops */
+  .float {
+    bottom: 40px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* about-us  page*/
+.about-company {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #444;
+  padding: 40px 20px;
+}
+
+.about-company h2 {
+  color: #2b2b2b;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.about-company p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.team-strength {
+  text-align: justify;
+}
+
+.real-assets {
+  font-size: 1.75rem;
+  font-weight: 700;
+  padding: 20px;
+}
+
+/* Infinity slider css 
+@keyframes slides {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 30px 0px;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  content: "";
+  width: 250px;
+  height: 100%;
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0),
+    rgb(255, 255, 255)
+  );
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgb(255, 255, 255)
+  );
+}
+
+.logo_items {
+  display: inline-block;
+  animation: 35s slides infinite linear;
+}
+
+.logos:hover .logo_items {
+  animation-play-state: paused;
+}
+
+.logo_items img {
+  height: 100px;
+} */
+
+/* Footer-Logo styling */
+.footer-logo {
+  width: 210px; /* Set your desired width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Helps with alignment */
+  margin: 0;
+}
+
+/* Optional: Add responsiveness */
+@media (max-width: 768px) {
+  .footer-logo {
+    width: 180px; /* Smaller logo on tablets/mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-logo {
+    width: 120px; /* Smaller logo on mobile */
+  }
+}
+
+.certificate-container {
+  display: flex;
+  justify-content: center; /* Horizontal center */
+  align-items: center; /* Vertical center (optional if container has height) */
+  padding: 20px;
+}
+
+.certificate-img {
+  width: 50vw; /* Scales with viewport width */
+  max-width: 366px; /* Original width */
+  height: auto; /* Maintain aspect ratio */
+  border: 2px solid #ccc; /* Optional border */
+  border-radius: 8px; /* Optional rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Optional shadow */
+}
+
+/* Smaller screens (tablet/mobile) */
+@media (max-width: 768px) {
+  .certificate-img {
+    width: 70vw; /* Slightly larger relative to screen width */
+    max-width: 366px;
+  }
+}
+
+/* Dealer Page General Section Styles */
+/* === Dealer Section Styles === */
+.dealer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* space between cards */
+}
+
+/* Dealer Card */
+.dealer-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dealer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Logo */
+.dealer-logo img {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* Info */
+.dealer-info {
+  flex: 1;
+}
+
+.dealer-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.dealer-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.dealer-info ul {
+  list-style: disc;
+  padding-left: 20px;
+  color: #555;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .dealer-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .dealer-logo img {
+    width: 120px;
+    margin-bottom: 15px;
+  }
+
+  .dealer-info ul {
+    text-align: left;
+    padding-left: 30px;
+  }
+}
+
+/* === PDF Viewer Section Styles === */
+/* PDF Card */
+.pdf-viewer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* space between cards */
+  padding: 0; /* reset any container padding */
+}
+
+.pdf-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.pdf-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Card Header */
+.pdf-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 22px;
+  cursor: pointer;
+  background: #fafafa;
+  border-bottom: 1px solid #eee;
+  transition: background 0.3s ease;
+}
+
+.pdf-card-header:hover {
+  background: #f0f0f0;
+}
+
+.pdf-card-header h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+}
+
+.toggle-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #31a1bf;
+}
+
+/* Card Content */
+.pdf-card-content {
+  display: none;
+  flex-direction: column;
+  padding: 15px 25px;
+  background: #fff;
+}
+
+.pdf-card-content.active {
+  display: flex;
+}
+
+/* PDF Item */
+.pdf-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 0;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #555;
+  transition: color 0.3s ease;
+  position: relative;
+  text-decoration: none; /* remove built-in underline */
+  width: fit-content; /* make underline only as wide as content */
+}
+
+/* Add custom underline */
+.pdf-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  width: 100%;
+  height: 1px;
+  background-color: #d6d6d6; /* soft underline */
+  transition: background-color 0.3s ease;
+}
+
+/* Disable hover effect for specific item */
+.pdf-item.no-hover {
+  pointer-events: none; /* disables hover & click */
+  color: #555; /* keeps normal text color */
+  cursor: default;
+}
+
+.pdf-item.no-hover::after {
+  background-color: #d6d6d6 !important; /* keeps soft underline, no hover change */
+}
+
+/* Hover effect */
+.pdf-item:hover,
+.pdf-link:hover {
+  color: #31a1bf;
+}
+
+.pdf-item:hover::after .pdf-link:hover::after {
+  background-color: #31a1bf; /* underline color on hover */
+}
+
+/* PDF Icon */
+.pdf-icon {
+  width: 24px; /* smaller and proportionate */
+  height: 24px;
+  display: inline-block;
+  object-fit: contain;
+  vertical-align: middle;
+  margin-top: 1px; /* fixes slight visual lift */
+  transition: filter 0.3s ease;
+}
+
+/* Hover effect for icon tint */
+.pdf-item:hover .pdf-icon {
+  filter: brightness(0) saturate(100%) invert(52%) sepia(92%) saturate(278%) hue-rotate(145deg)
+    brightness(96%) contrast(90%);
+}
+.pdf-link:hover,
+.pdf-link:hover .pdf-icon {
+  color: #31a1bf;
+  cursor: pointer;
+  filter: brightness(0) saturate(100%) invert(52%) sepia(92%) saturate(278%) hue-rotate(145deg)
+    brightness(96%) contrast(90%);
+}
+
+/* Modal Popup */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  background: #fff;
+  width: 90%;
+  max-width: 800px;
+  height: 80%;
+  max-height: 700px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.modal iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 26px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #31a1bf;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pdf-card-header h3 {
+    font-size: 1rem;
+  }
+  .pdf-item {
+    font-size: 0.9rem;
+  }
+  .modal-content {
+    width: 95%;
+    height: 85%;
+  }
+  /* ✅ Add this for side spacing on mobile/tablet */
+  .pdf-viewer-list {
+    padding: 0 15px; /* adds 15px space on left & right */
+  }
+}
+.space-between {
+  margin-top: 2rem; /* adds space above the div */
+  margin-bottom: 2rem; /* adds space below the div */
+}
+
+/* =============== MFG PAINT CUSTOM STYLES =============== */
+/*For Rust Protection page-cross-section-of-submersiblepump.webp*/
+/* Center image container */
+
+.coating-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 3D Card style for main image */
+.coating-image {
+  height: 360px;
+  width: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25), 0 10px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Full-size image in popup */
+.modal-content {
+  display: block;
+  margin: auto;
+  max-width: 95%;
+  max-height: 95%;
+  border-radius: 20px;
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.35), 0 10px 25px rgba(0, 0, 0, 0.2);
+  transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1);
+  transition: transform 0.5s ease;
+}
+
+/* Caption text */
+#caption {
+  text-align: center;
+  color: #333;
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 25px;
+  right: 40px;
+  color: #333;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #888;
+}
+
+/* Responsive tweak */
+@media (max-width: 768px) {
+  .coating-image {
+    height: 350px;
+  }
+}
+
+/* Card container */
+.dealer-card {
+  display: flex;
+  flex-direction: row; /* horizontal layout */
+  gap: 30px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Each horizontal item */
+.dealer-item {
+  flex: 1; /* equal width for both sides */
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+/* Optional hover effect */
+.dealer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .dealer-card {
+    flex-direction: column; /* stack vertically on mobile */
+  }
+}
+
+/* ---------------------------------------------*/
+/* Custom style only for Shade Cards images on mfg-paint page */
+.shade-img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* subtle 3D shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Scope everything under #mfg-paint to avoid conflicts */
+#mfg-paint p {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+/* === Custom override for Shade Cards grid === */
+/* Only affects this page */
+#portfolio.product-applications > .container > .row.gy-4 > .portfolio-item {
+  flex: 0 0 270px;
+  max-width: 270px;
+  box-sizing: border-box;
+  padding: 0.5rem;
+}
+
+#portfolio.product-applications > .container > .row.gy-4 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  #portfolio.product-applications > .container > .row.gy-4 > .portfolio-item {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
+}
+@media (max-width: 768px) {
+  #portfolio.product-applications > .container > .row.gy-4 > .portfolio-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 480px) {
+  #portfolio.product-applications > .container > .row.gy-4 > .portfolio-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/*==========================Application details page ==========================*/
+.application-details h3 {
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.service-list {
+  text-align: left;
+}
+
+.blast-cleaning-tab {
+  padding: 0 !important;
+}
+
+/* Image -rust-gread-blast-cleaning */
+.rust-gread-blast-cleaning {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+.rust-gread-blast-cleaning:hover {
+  transform: translateY(-5px);
+}
+/* ===========================
+   Anti-Corrosive Coatings Page
+=========================== */
+
+.coating-img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.coating-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Text below images */
+.portfolio-item h6 {
+  font-size: 1rem;
+  color: #555;
+  text-transform: capitalize;
+}
+
+/* Adjust spacing between sections */
+#anti-corrosive ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+#anti-corrosive h5 {
+  color: var(--heading-color, #333);
+  margin-top: 2rem;
+}
+
+#anti-corrosive .section-title p {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #555;
+}
+.label-text {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #5f687b !important;
+}
+
+.label-text .number {
+  font-size: 1.75rem;
+  color: #5f687b !important;
+  margin-right: 4px;
+}

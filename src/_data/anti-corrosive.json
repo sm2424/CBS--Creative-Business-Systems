@@ -1,0 +1,161 @@
+{
+  "sections": [
+    {
+      "id": 1,
+      "title": "Acid, Alkaline and Solvent Resistant Coatings for:",
+      "applications": [
+        "Tanks, Vessels, Structures, Pipelines, Process Equipments",
+        "Compressors, Driers, Crushers and Grinders, Filters, Generators"
+      ],
+      "gallery": [
+        {
+          "group": "group1",
+          "items": [
+            {
+              "img": "/assets/img/anti1-before.webp",
+              "title": "Before Coating",
+              "caption": "Before"
+            },
+            {
+              "img": "/assets/img/anti1-after.webp",
+              "title": "After Coating",
+              "caption": "After"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Chemical and Abrasion Resistant Coating for:",
+      "applications": ["Steel structures and checkered plates", "M.S. Sheets"],
+      "gallery": [
+        {
+          "group": "group2",
+          "items": [
+            {
+              "img": "/assets/img/anti2-before.webp",
+              "title": "Before Coating",
+              "caption": "Before"
+            },
+            {
+              "img": "/assets/img/anti2-progress.webp",
+              "title": "In-Progress Coating",
+              "caption": "In-Progress"
+            },
+            {
+              "img": "/assets/img/anti3-after.webp",
+              "title": "After Coating",
+              "caption": "After"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Chemical, Water, and Salt Resistant Coating for:",
+      "applications": ["Effluent treatment plants", "Storage tanks, Process tanks"],
+      "gallery": [
+        {
+          "group": "group3",
+          "items": [
+            {
+              "img": "/assets/img/anti3-progress1.webp",
+              "title": "In Progress",
+              "caption": "In Progress"
+            },
+            {
+              "img": "/assets/img/anti3-progress2.webp",
+              "title": "In Progress",
+              "caption": "In Progress"
+            },
+            {
+              "img": "/assets/img/anti3-progress3.webp",
+              "title": "In Progress",
+              "caption": "In Progress"
+            },
+            {
+              "img": "/assets/img/anti3-progress4.webp",
+              "title": "In Progress",
+              "caption": "In Progress"
+            },
+            {
+              "img": "/assets/img/anti3-progress5.webp",
+              "title": "In Progress",
+              "caption": "In Progress"
+            },
+            {
+              "img": "/assets/img/anti3-progress6.webp",
+              "title": "In Progress",
+              "caption": "In Progress"
+            },
+            {
+              "img": "/assets/img/anti3-after1.webp",
+              "title": "After Coating",
+              "caption": "After"
+            },
+            {
+              "img": "/assets/img/anti3-after2.webp",
+              "title": "After Coating",
+              "caption": "After"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Cold Water and Moisture Resistant Coating for:",
+      "applications": ["Cooling towers", "Pipelines"],
+      "gallery": [
+        {
+          "group": "group4",
+          "items": [
+            {
+              "img": "/assets/img/anti4-progress1.webp",
+              "title": "In Progress",
+              "caption": "In Progress"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Specialized Coating for Highly Corrosive Area:",
+      "applications": ["Mixing plants", "Vessels", "Overhead structures"],
+      "gallery": [
+        {
+          "group": "group5",
+          "items": [
+            {
+              "img": "/assets/img/anti5-before.webp",
+              "title": "Before Coating",
+              "caption": "Before"
+            },
+            {
+              "img": "/assets/img/anti5-after.webp",
+              "title": "After Coating",
+              "caption": "After"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Protective Coating against:",
+      "applications": ["Corrosive gaseous environment in chemical plants", "Chemical plants"],
+      "gallery": []
+    },
+    {
+      "id": 7,
+      "title": "Specialized Coating against Corrosion due to:",
+      "applications": ["Coastal weather"],
+      "base": "Epoxy / Polyurethane / Ethyl Silicate",
+      "type": "Zinc Phosphate / Chromate - HB, MIO, Enamel",
+      "gallery": []
+    }
+  ]
+}
