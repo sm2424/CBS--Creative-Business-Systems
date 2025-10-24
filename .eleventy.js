@@ -29,6 +29,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/forms');
   eleventyConfig.addPassthroughCopy('src/css');
   eleventyConfig.addPassthroughCopy('src/pdf');
+  eleventyConfig.addPassthroughCopy('src/admin');
 
   /* ----------------------------
    * ✅ MINIFY INLINE CSS
