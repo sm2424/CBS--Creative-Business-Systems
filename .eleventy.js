@@ -20,7 +20,6 @@ module.exports = function (eleventyConfig) {
 const htmlmin = require('html-minifier-terser');
 const CleanCSS = require('clean-css');
 const Terser = require('terser');
-const Image = require('@11ty/eleventy-img');
 
 module.exports = function (eleventyConfig) {
   /* ----------------------------
@@ -32,40 +31,19 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/pdf');
 
   /* ----------------------------
-   * ✅ IMAGE OPTIMIZATION (async)
-   * ---------------------------- */
-  eleventyConfig.addShortcode('image', async (src, alt, cls = '') => {
-    let metadata = await Image(src, {
-      widths: [300, 600, 1200],
-      formats: ['webp', 'jpeg'],
-      urlPath: '/assets/optimized/',
-      outputDir: './public/assets/optimized/',
-    });
-
-    let imageAttributes = {
-      alt,
-      class: cls,
-      loading: 'lazy',
-      decoding: 'async',
-    };
-
-    return Image.generateHTML(metadata, imageAttributes);
-  });
-
-  /* ----------------------------
    * ✅ MINIFY INLINE CSS
    * ---------------------------- */
-  eleventyConfig.addFilter('cssmin', function (code) {
+  eleventyConfig.addFilter('cssmin', (code) => {
     return new CleanCSS({}).minify(code).styles;
   });
 
   /* ----------------------------
    * ✅ MINIFY INLINE JS
    * ---------------------------- */
-  eleventyConfig.addFilter('jsmin', function (code) {
+  eleventyConfig.addFilter('jsmin', (code) => {
     let minified = Terser.minify(code);
     if (minified.error) {
-      console.log('Terser error: ', minified.error);
+      console.log('Terser error:', minified.error);
       return code;
     }
     return minified.code;
@@ -74,15 +52,14 @@ module.exports = function (eleventyConfig) {
   /* ----------------------------
    * ✅ MINIFY HTML OUTPUT
    * ---------------------------- */
-  eleventyConfig.addTransform('htmlmin', async function (content, outputPath) {
+  eleventyConfig.addTransform('htmlmin', async (content, outputPath) => {
     if (outputPath && outputPath.endsWith('.html')) {
-      let minified = await htmlmin.minify(content, {
+      return await htmlmin.minify(content, {
         collapseWhitespace: true,
         removeComments: true,
         minifyJS: true,
         minifyCSS: true,
       });
-      return minified;
     }
     return content;
   });
