@@ -826,13 +826,14 @@
 /*#########################################
           Large image / Fullscreen Swiper  
 #########################################*/
+
 .swiper-fullscreen {
   width: 100%;
 }
 
 .swiper-fullscreen .swiper-slide {
   display: flex;
-  flex-direction: column; /* title above image */
+  flex-direction: column;
   align-items: center;
 }
 
@@ -840,32 +841,57 @@
   font-size: 1.8rem;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 10px; /* space between title and image */
-  color: #222; /* simple color */
+  margin-bottom: 10px;
+  color: #222;
 }
 
-/* Images: maintain uniform aspect ratio */
-.swiper-fullscreen .swiper-slide img {
+/* Image wrapper to ensure uniform height */
+.swiper-fullscreen .img-wrapper {
   width: 100%;
-  max-height: 75vh; /* desktop/tablet */
-  object-fit: cover;
+  aspect-ratio: 16 / 9; /* ensures consistent width & height ratio */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* keeps image inside red border */
+  box-sizing: border-box;
+}
+
+.swiper-fullscreen .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills the box neatly */
   display: block;
 }
 
-/* Move pagination below the image */
+/* Pagination below the image */
 .swiper-fullscreen .swiper-pagination {
-  position: relative !important; /* overrides default absolute positioning */
-  margin-top: 10px; /* spacing below the image */
-  bottom: auto !important; /* reset any absolute bottom */
+  position: relative !important;
+  margin-top: 10px;
+  bottom: auto !important;
 }
 
-/* Mobile adjustments for uniform image height */
+/* Mobile adjustments */
 @media (max-width: 768px) {
   .swiper-fullscreen .slide-title h3 {
-    font-size: 1.4rem; /* slightly smaller title */
+    font-size: 1.4rem;
+  }
+  .swiper-fullscreen .img-wrapper {
+    height: 50vh;
+  }
+}
+
+/*---------------------------------------
+  Mobile adjustments
+----------------------------------------*/
+@media (max-width: 768px) {
+  .swiper-fullscreen .swiper-slide {
+    height: 50vh; /* all slides same height on mobile */
+  }
+  .swiper-fullscreen .slide-title h3 {
+    font-size: 1.4rem;
   }
   .swiper-fullscreen .swiper-slide img {
-    max-height: 40vh; /* smaller, uniform height on mobile */
+    max-height: calc(50vh - 30px); /* subtract title + margin */
   }
 }
 
