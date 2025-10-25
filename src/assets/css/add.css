@@ -503,14 +503,14 @@
 
 /* Full-size image in popup */
 .modal-content {
-  display: block;
-  margin: auto;
-  max-width: 95%;
-  max-height: 95%;
-  border-radius: 20px;
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.35), 0 10px 25px rgba(0, 0, 0, 0.2);
-  transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1);
-  transition: transform 0.5s ease;
+  position: relative;
+  background: #fff;
+  width: 60%; /* or keep what you prefer */
+  height: 95vh; /* 👈 fills 95% of the viewport height */
+  max-height: none; /* remove height limit */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* Caption text */

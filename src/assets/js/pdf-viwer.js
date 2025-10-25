@@ -15,7 +15,7 @@ function openPDF(event, filePath, title) {
   const pdfTitle = document.getElementById('pdfTitle');
 
   pdfTitle.textContent = title || 'Document';
-  viewer.src = filePath;
+  viewer.src = `${filePath}#zoom=50`; // 👈 add this zoom control
   modal.style.display = 'flex';
   document.body.style.overflow = 'hidden';
 }
