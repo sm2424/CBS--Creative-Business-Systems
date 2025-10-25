@@ -243,6 +243,41 @@ title: Creative Business Systems - Home
   </section>
   <!-- /Services Section -->
 
+  <!-- Large image swiper -->
+  <section id="large-swiper" class="section light-background">
+    <div class="container">
+      <div class="swiper init-swiper swiper-fullscreen" data-speed="600" data-delay="5000">
+        <script type="application/json" class="swiper-config">
+          {
+            "loop": true,
+            "speed": 600,
+            "autoplay": { "delay": 5000 },
+            "slidesPerView": 1,
+            "spaceBetween": 0,
+            "pagination": {
+              "el": ".swiper-pagination",
+              "type": "bullets",
+              "clickable": true
+            }
+          }
+        </script>
+
+        <div class="swiper-wrapper">
+          {% for slide in mainpageimages %}
+          <div class="swiper-slide">
+            <div class="slide-title">
+              <h3>{{ slide.title }}</h3>
+            </div>
+            <img src="{{ slide.image }}" alt="{{ slide.alt }}" />
+          </div>
+          {% endfor %}
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
   <!-- Portfolio Section -->
   <section id="portfolio" class="portfolio section">
     <!-- Section Title -->
