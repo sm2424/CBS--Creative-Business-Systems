@@ -1,50 +1,90 @@
 <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+  <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="/assets/img/logo.png" alt="">
-        
-      </a>
+    <!-- Logo -->
+    <a href="/" class="logo d-flex align-items-center me-auto">
+      <img src="/assets/img/logo.png" alt="Creative Business Systems Logo">
+    </a>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="/" class="active">Home</a></li>
-          <li><a href="/about/">About</a></li>
-          <li><a href="/mfg-paint/">Mfg. Paint</a></li>
-          <li><a href="/rust-protection/">Rust Protection</a></li>
-          <li><a href="/dealer/">Dealer</a></li>
-          
-          
-          
-           <li class="dropdown"><a href="/paint-application/"><span>Paint Application</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              
-              <li><a href="/application-details/">Application Details</a></li>
-              <li><a href="/coating-selection/">Coating Selection</a></li>
-              <li class="dropdown"><a href="/we-can-offer/"><span>We Can Offer</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul class="scrollable-submenu">
-                    <li><a href="/anti-corrosive-coatings/">Anti-Corrosive Coatings</a></li>
-                    <li><a href="/industrial-flooring/">Industrial Flooring</a></li>
-                    <li><a href="/hygienic-food-grade-coating/">Hygienic Food Grade Coating</a></li>
-                    <li><a href="/heat-resistant-coating/">Heat Resistant Coating</a></li>
-                    <li><a href="/blasting/">Blasting</a></li>
-                    <li><a href="/zinc-aluminum-spray/">Zinc / Aluminum Spray Application</a></li>
-                    <li><a href="/tile-grouting/">Tile Grouting</a></li>
-                    <li><a href="/bituminous/">Bituminous</a></li>
-                    <li><a href="/fertilizer-plants/">Fertilizer Plants</a></li>
-                    <li><a href="/rust-sealer-coatings/">Rust Sealer Coatings</a></li>
-                  </ul>
-              </li>
-            </ul>
-          </li>
-        <li><a href="/gallery/">Gallery</a></li>
-          <li><a href="/blog/">Blog</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+    <!-- Navigation -->
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="/" class="{% if page.url == '/' %}active{% endif %}">Home</a></li>
+        <li><a href="/about/" class="{% if page.url == '/about/' %}active{% endif %}">About</a></li>
+        <li><a href="/mfg-paint/" class="{% if page.url == '/mfg-paint/' %}active{% endif %}">Mfg. Paint</a></li>
+        <li><a href="/rust-protection/" class="{% if page.url == '/rust-protection/' %}active{% endif %}">Rust Protection</a></li>
+        <li><a href="/dealer/" class="{% if page.url == '/dealer/' %}active{% endif %}">Dealer</a></li>
 
-      <a class="btn-getstarted" href="/contact/">Contact</a>
+        <!-- Dropdown -->
+        {% set paintAppUrls = [
+          '/paint-application/',
+          '/application-details/',
+          '/coating-selection/',
+          '/we-can-offer/',
+          '/anti-corrosive-coatings/',
+          '/industrial-flooring/',
+          '/hygienic-food-grade-coating/',
+          '/heat-resistant-coating/',
+          '/blasting/',
+          '/zinc-aluminum-spray/',
+          '/tile-grouting/',
+          '/bituminous/',
+          '/fertilizer-plants/',
+          '/rust-sealer-coatings/'
+        ] %}
+        <li class="dropdown">
+          <a href="/paint-application/" class="{% if page.url in paintAppUrls %}active{% endif %}">
+            <span>Paint Application</span>
+            <i class="bi bi-chevron-down toggle-dropdown"></i>
+          </a>
+          <ul>
+            <li><a href="/application-details/" class="{% if page.url == '/application-details/' %}active{% endif %}">Application Details</a></li>
+            <li><a href="/coating-selection/" class="{% if page.url == '/coating-selection/' %}active{% endif %}">Coating Selection</a></li>
 
-    </div>
-  </header>
+            <!-- Nested Dropdown -->
+            {% set weCanOfferUrls = [
+              '/we-can-offer/',
+              '/anti-corrosive-coatings/',
+              '/industrial-flooring/',
+              '/hygienic-food-grade-coating/',
+              '/heat-resistant-coating/',
+              '/blasting/',
+              '/zinc-aluminum-spray/',
+              '/tile-grouting/',
+              '/bituminous/',
+              '/fertilizer-plants/',
+              '/rust-sealer-coatings/'
+            ] %}
+            <li class="dropdown">
+              <a href="/we-can-offer/" class="{% if page.url in weCanOfferUrls %}active{% endif %}">
+                <span>We Can Offer</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i>
+              </a>
+              <ul class="scrollable-submenu">
+                <li><a href="/anti-corrosive-coatings/" class="{% if page.url == '/anti-corrosive-coatings/' %}active{% endif %}">Anti-Corrosive Coatings</a></li>
+                <li><a href="/industrial-flooring/" class="{% if page.url == '/industrial-flooring/' %}active{% endif %}">Industrial Flooring</a></li>
+                <li><a href="/hygienic-food-grade-coating/" class="{% if page.url == '/hygienic-food-grade-coating/' %}active{% endif %}">Hygienic Food Grade Coating</a></li>
+                <li><a href="/heat-resistant-coating/" class="{% if page.url == '/heat-resistant-coating/' %}active{% endif %}">Heat Resistant Coating</a></li>
+                <li><a href="/blasting/" class="{% if page.url == '/blasting/' %}active{% endif %}">Blasting</a></li>
+                <li><a href="/zinc-aluminum-spray/" class="{% if page.url == '/zinc-aluminum-spray/' %}active{% endif %}">Zinc / Aluminum Spray Application</a></li>
+                <li><a href="/tile-grouting/" class="{% if page.url == '/tile-grouting/' %}active{% endif %}">Tile Grouting</a></li>
+                <li><a href="/bituminous/" class="{% if page.url == '/bituminous/' %}active{% endif %}">Bituminous</a></li>
+                <li><a href="/fertilizer-plants/" class="{% if page.url == '/fertilizer-plants/' %}active{% endif %}">Fertilizer Plants</a></li>
+                <li><a href="/rust-sealer-coatings/" class="{% if page.url == '/rust-sealer-coatings/' %}active{% endif %}">Rust Sealer Coatings</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="/gallery/" class="{% if page.url == '/gallery/' %}active{% endif %}">Gallery</a></li>
+        <li><a href="/blog/" class="{% if page.url == '/blog/' %}active{% endif %}">Blog</a></li>
+      </ul>
+
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+
+    <!-- Contact Button -->
+    <a class="btn-getstarted" href="/contact/">Contact</a>
+
+  </div>
+</header>

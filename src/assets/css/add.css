@@ -954,3 +954,20 @@
 .bg-service-4 {
   background-image: url('/assets/img/health-concerns-with-paints.webp');
 }
+
+/*##############
+Header.njk => navbar active link issue
+##################*/
+
+/* Highlight active navigation link */
+.navmenu a.active,
+.navmenu ul li a.active,
+.navmenu .scrollable-submenu a.active {
+  color: #31a1bf; /* Your main theme color */
+  font-weight: 600;
+  text-shadow: 0 0 6px rgba(49, 161, 191, 0.6); /* Soft blue glow effect */
+  transition: all 0.3s ease;
+}
+.navmenu a.active:hover {
+  text-shadow: 0 0 10px #2b9cb8;
+}
