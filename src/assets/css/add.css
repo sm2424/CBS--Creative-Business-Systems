@@ -824,7 +824,7 @@
 }
 
 /*#########################################
-          Fullscreen Swiper  
+          Large image / Fullscreen Swiper  
 #########################################*/
 .swiper-fullscreen {
   width: 100%;
@@ -844,15 +844,87 @@
   color: #222; /* simple color */
 }
 
+/* Images: maintain uniform aspect ratio */
 .swiper-fullscreen .swiper-slide img {
   width: 100%;
-  max-height: 75vh; /* uniform height */
+  max-height: 75vh; /* desktop/tablet */
   object-fit: cover;
   display: block;
 }
+
 /* Move pagination below the image */
 .swiper-fullscreen .swiper-pagination {
   position: relative !important; /* overrides default absolute positioning */
   margin-top: 10px; /* spacing below the image */
   bottom: auto !important; /* reset any absolute bottom */
+}
+
+/* Mobile adjustments for uniform image height */
+@media (max-width: 768px) {
+  .swiper-fullscreen .slide-title h3 {
+    font-size: 1.4rem; /* slightly smaller title */
+  }
+  .swiper-fullscreen .swiper-slide img {
+    max-height: 40vh; /* smaller, uniform height on mobile */
+  }
+}
+
+/*#############################################################
+            Featured Services Section
+#############################################################*/
+/* Hide pagination for this swiper only */
+.no-pagination-swiper .swiper-pagination {
+  height: 300px; /* ensures swiper has visible area on mobile */
+  display: none !important;
+}
+@media (max-width: 768px) {
+  .no-pagination-swiper .swiper-slide {
+    height: 280px; /* adjust for mobile */
+  }
+}
+
+/* Equal height + white text */
+.no-pagination-swiper .swiper-slide {
+  height: 320px;
+  display: flex;
+}
+
+.no-pagination-swiper .service-item {
+  color: #fff;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px 20px;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.no-pagination-swiper .service-item h4 a {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+.no-pagination-swiper .service-item p {
+  color: #fff;
+  font-size: 0.95rem;
+  margin-top: 10px;
+}
+
+/* Backgrounds */
+.bg-service-1 {
+  background-image: url('/assets/img/tucson-painters-steel-painting-2_orig.webp');
+}
+.bg-service-2 {
+  background-image: url('/assets/img/6e20ba03e3c12bebb09a7e2f8ae70bb9_edited_.webp');
+}
+.bg-service-3 {
+  background-image: url('/assets/img/PRODUCTION.webp');
+}
+.bg-service-4 {
+  background-image: url('/assets/img/health-concerns-with-paints.webp');
 }
