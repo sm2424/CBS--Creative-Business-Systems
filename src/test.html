@@ -1,109 +1,72 @@
 ---
-title: Test-Rust Protection Solutions
+title: Test-Authorised Dealer
 layout: layout.njk
 ---
 
 {% include "page-title.njk" %}
 
-<!-- Corrosion Prevention -->
-<section id="rust-protection" class="rust-protection section">
+<!-- Dealers Section -->
+<section class="section-add">
   <div class="container section-title" data-aos="fade-up">
-    <span>Corrosion Prevention</span>
-    <h2>Corrosion Prevention</h2>
+    <span>Our Dealers</span>
+    <h2>Dealers</h2>
   </div>
 
-  <div class="container">
-    <div class="row gy-4">
-      <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
-        <div class="all-content">
-          <p>
-            Corrosion is a natural process — a degradation of metal when oxygen comes in contact
-            with MS or multi-metal surfaces. Preventing it at an early stage increases product life
-            and reduces surface preparation and labour costs.
-          </p>
-
-          <p>
-            Every final equipment or machine requires time between 2 to 60 days. We manufacture
-            various types of rust preventives — water-based, solvent-based, and oil-based — solving
-            rusting issues during assembly, transportation, installation, storage, machining, and
-            packing.
-          </p>
-
-          <p>
-            Our water-based corrosion-resistant materials offer rust prevention from 15 days to 20
-            years — the result of 25 years of research, teamwork, and over 2200 laboratory tests.
-          </p>
-
-          <p>This is the most cost-effective and performance-based solution.</p>
-
-          <p class="highlight">We offer a large variety of corrosion prevention solutions.</p>
-        </div>
+  <div class="container all-content" data-aos="fade-up">
+    <!-- Dealer 1 -->
+    <div class="dealer-card">
+      <div class="dealer-logo">
+        <img src="/assets/img/asian-paints-ppg-logo.png" alt="Asian Paints Logo" />
       </div>
-      <div
-        class="col-lg-6 position-relative align-self-start"
-        data-aos="fade-up"
-        data-aos-delay="100"
-      >
-        <div class="coating-images" data-aos="fade-up" data-aos-delay="200">
-          <img
-            class="coating-image"
-            src="/assets/img/cross-section-of-submersiblepump.webp"
-            alt="Rust Coating Diagram"
-            title="🔍 Click to view in full size"
-          />
-        </div>
+      <div class="dealer-info">
+        <h3>Asian Paints</h3>
+        <p>
+          Creative Business Systems are authorised dealers of Asian Paints PPG Pvt. Ltd. since 1998.
+          We provide anti-corrosive paints, technological support, and cost-effective coating
+          solutions.
+        </p>
+        <ul>
+          <li>Conventional Coatings</li>
+          <li>Chlorinated Rubber Coatings</li>
+          <li>Acrylic Coatings</li>
+          <li>Epoxy Coatings</li>
+          <li>Rust Tolerant High Performance Epoxy Coatings</li>
+          <li>Polyurethane Coatings</li>
+          <li>Inorganic Zinc Silicate Coating</li>
+          <li>Heat Resistant Coatings</li>
+          <li>Miscellaneous Coatings</li>
+          <li>Asian Flooring</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Dealer 2 -->
+    <div class="dealer-card">
+      <div class="dealer-logo">
+        <img src="/assets/img/esdee-paints-logo.png" alt="Esdee Paints Logo" />
+      </div>
+      <div class="dealer-info">
+        <h3>Esdee Paints</h3>
+        <p>
+          We are authorised dealers of Esdee Paints with a wide range of automotive, PU coating, and
+          anti-corrosive paints. We provide technological support and coating solutions.
+        </p>
+      </div>
+    </div>
+
+    <!-- Dealer 3 -->
+    <div class="dealer-card">
+      <div class="dealer-logo">
+        <img src="/assets/img/shalimar-paints-logo.png" alt="Shalimar Paints Logo" />
+      </div>
+      <div class="dealer-info">
+        <h3>Shalimar Paints</h3>
+        <p>
+          Shalimar Paints is a leading manufacturer specializing in heat-resistant, bitumen, and
+          marine coatings. We provide coatings for industrial, government, and heavy industry
+          projects.
+        </p>
       </div>
     </div>
   </div>
 </section>
-<!-- End Corrosion Prevention -->
-
-<!-- PDF Section -->
-<section id="pdf-viewer" class="pdf-viewer section">
-  <div class="container pdf-viewer-list" data-aos="fade-up" data-aos-delay="100">
-    <div class="pdf-card">
-      <div class="pdf-card-header" onclick="toggleCard(this)">
-        <h3>Types of Coatings (Click for Details)</h3>
-        <span class="toggle-icon">+</span>
-      </div>
-
-      <div class="pdf-card-content">
-        {% for pdf in types-of-coatings %}
-        <div class="pdf-item" onclick="openPDF(event, '{{ pdf.file }}', '{{ pdf.title }}')">
-          <img src="/assets/img/pdf-icon-2.png" alt="PDF Icon" class="pdf-icon" />
-          <strong>{{ pdf.title }}</strong>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-
-  {% include "pdf-modal.njk" %} {% include "image-modal.njk" %}
-</section>
-<!-- End PDF Section -->
-
-<!-- Product Applications -->
-<section id="portfolio" class="portfolio section product-applications">
-  <div class="container section-title" data-aos="fade-up">
-    <span>Product Applications</span>
-    <h2>Product Applications</h2>
-  </div>
-
-  <div class="container">
-    <div class="row gy-4" data-aos="fade-up" data-aos-delay="200">
-      {% for card in product-application %}
-      <div class="col-lg-4 col-md-6 portfolio-item">
-        <img src="{{ card.image }}" class="img-fluid shade-img" alt="{{ card.title }}" />
-        <div class="portfolio-info">
-          <h4>{{ card.title }}</h4>
-          <p>{{ card.description }}</p>
-          <a href="{{ card.image }}" title="{{ card.title }}" class="glightbox preview-link">
-            <i class="bi bi-zoom-in"></i>
-          </a>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-<!-- End Product Applications -->

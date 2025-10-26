@@ -226,6 +226,7 @@
 /*##############################################
               Rust-Protection Page
 ##############################################*/
+
 .coating-images {
   display: flex;
   justify-content: center;
@@ -364,7 +365,45 @@
 }
 
 /*##############################################
-              page
+          Dealer Page
+##############################################*/
+
+.dealer-card {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  margin-bottom: 30px; /* space between cards */
+}
+
+.dealer-card:hover {
+  transform: translateY(-5px) rotateX(2deg) rotateY(-2deg);
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.dealer-logo img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.dealer-info {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .dealer-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+/*##############################################
+           Page
 ##############################################*/
 
 /*##############################*/
@@ -415,79 +454,6 @@
 
 /* Dealer Page General Section Styles */
 /* === Dealer Section Styles === */
-.dealer-list {
-  display: flex;
-  flex-direction: column;
-  gap: 30px; /* space between cards */
-}
-
-/* Dealer Card */
-.dealer-card {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  padding: 20px;
-  border-radius: 12px;
-  background: #fff;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.dealer-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-}
-
-/* Logo */
-.dealer-logo img {
-  width: 150px;
-  height: auto;
-  object-fit: contain;
-  border-radius: 8px;
-}
-
-/* Info */
-.dealer-info {
-  flex: 1;
-}
-
-.dealer-info h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.dealer-info p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 10px;
-  color: #555;
-}
-
-.dealer-info ul {
-  list-style: disc;
-  padding-left: 20px;
-  color: #555;
-}
-
-/* Responsive Layout */
-@media (max-width: 768px) {
-  .dealer-card {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-  }
-
-  .dealer-logo img {
-    width: 120px;
-    margin-bottom: 15px;
-  }
-
-  .dealer-info ul {
-    text-align: left;
-    padding-left: 30px;
-  }
-}
 
 /* === PDF Viewer Section Styles == */
 /* ===============  Rust Protection CUSTOM STYLES =============== */
@@ -496,39 +462,6 @@
 
 /*###################*/
 /* Card container */
-.dealer-card {
-  display: flex;
-  flex-direction: row; /* horizontal layout */
-  gap: 30px;
-  padding: 20px;
-  border-radius: 12px;
-  background: #fff;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s, box-shadow 0.3s;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* Each horizontal item */
-.dealer-item {
-  flex: 1; /* equal width for both sides */
-  background: #f9f9f9;
-  border-radius: 8px;
-  padding: 20px;
-}
-
-/* Optional hover effect */
-.dealer-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive behavior */
-@media (max-width: 768px) {
-  .dealer-card {
-    flex-direction: column; /* stack vertically on mobile */
-  }
-}
 
 /* ---------------------------------------------*/
 /* Custom style only for Shade Cards images on mfg-paint page */
