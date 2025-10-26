@@ -1,3 +1,228 @@
+/*##############################################
+            about-us  page
+##############################################*/
+
+.about-content {
+  text-align: justify;
+}
+
+.section-add {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 30px 0;
+  scroll-margin-top: 100px;
+  overflow: clip;
+}
+
+.section-title-add h4 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 0;
+  position: relative;
+  z-index: 2;
+}
+
+/*##############################################
+            Manufacturing Paint Page
+##############################################*/
+
+.pdf-viewer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* space between cards */
+}
+
+.pdf-card {
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12); /* stronger shadow */
+  border: 1px solid #31a1bf;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  background: #ffffff; /* subtle contrast with page */
+}
+
+.pdf-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18); /* stronger lift */
+  background: #f0faff; /* soft highlight on hover */
+}
+
+/* Card Header */
+.pdf-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 22px;
+  cursor: pointer;
+  background: #fafafa;
+}
+
+.pdf-card-header h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+}
+
+.pdf-card-header h3:hover {
+  color: #31a1bf;
+}
+
+.toggle-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #31a1bf;
+}
+
+/* Card Content */
+.pdf-card-content {
+  display: none;
+  flex-direction: column;
+  padding: 15px 25px;
+  background: #fff;
+}
+
+.pdf-card-content.active {
+  display: flex;
+}
+
+/* PDF Item */
+.pdf-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 0;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #555;
+  transition: color 0.3s ease;
+  position: relative;
+  text-decoration: none; /* remove built-in underline */
+  width: fit-content; /* make underline only as wide as content */
+}
+
+/* Add custom underline */
+.pdf-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  width: 100%;
+  height: 1px;
+  background-color: #d6d6d6; /* soft underline */
+  transition: background-color 0.3s ease;
+}
+
+/* Disable hover effect for specific item */
+.pdf-item.no-hover {
+  pointer-events: none; /* disables hover & click */
+  color: #555; /* keeps normal text color */
+  cursor: default;
+}
+
+.pdf-item.no-hover::after {
+  background-color: #d6d6d6 !important; /* keeps soft underline, no hover change */
+}
+
+/* Hover effect */
+.pdf-item:hover,
+.pdf-link:hover {
+  color: #31a1bf;
+}
+
+.pdf-item:hover::after,
+.pdf-link:hover::after {
+  background-color: #31a1bf; /* underline color on hover */
+}
+
+/* PDF Icon */
+.pdf-icon {
+  width: 24px; /* smaller and proportionate */
+  height: 24px;
+  display: inline-block;
+  object-fit: contain;
+  vertical-align: middle;
+  margin-top: 1px; /* fixes slight visual lift */
+  transition: filter 0.3s ease;
+}
+
+/* Hover effect for icon tint */
+.pdf-item:hover .pdf-icon {
+  filter: brightness(0) saturate(100%) invert(52%) sepia(92%) saturate(278%) hue-rotate(145deg)
+    brightness(96%) contrast(90%);
+}
+.pdf-link:hover,
+.pdf-link:hover .pdf-icon {
+  color: #31a1bf;
+  cursor: pointer;
+  filter: brightness(0) saturate(100%) invert(52%) sepia(92%) saturate(278%) hue-rotate(145deg)
+    brightness(96%) contrast(90%);
+}
+
+/* Modal Popup */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  background: #fff;
+  width: 90%;
+  max-width: 800px;
+  height: 80%;
+  max-height: 700px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.modal iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 26px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #31a1bf;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pdf-card-header h3 {
+    font-size: 1rem;
+  }
+  .pdf-item {
+    font-size: 0.9rem;
+  }
+  .modal-content {
+    width: 95%;
+    height: 85%;
+  }
+  /* ✅ Add this for side spacing on mobile/tablet */
+  .pdf-viewer-list {
+    padding: 0 15px; /* adds 15px space on left & right */
+  }
+}
+
 .float {
   position: fixed;
   width: 60px;
@@ -57,29 +282,6 @@
     width: 60px;
     height: 60px;
   }
-}
-/*##############################################*/
-/* about-us  page*/
-/*##############################################*/
-.about-content {
-  text-align: justify;
-}
-
-.section-add {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  padding: 30px 0;
-  scroll-margin-top: 100px;
-  overflow: clip;
-}
-
-.section-title-add h4 {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 0;
-  position: relative;
-  z-index: 2;
 }
 
 /*##############################*/
@@ -204,209 +406,8 @@
   }
 }
 
-/* === PDF Viewer Section Styles === */
-/* PDF Card */
-.pdf-viewer-list {
-  display: flex;
-  flex-direction: column;
-  gap: 30px; /* space between cards */
-  padding: 0; /* reset any container padding */
-}
-
-.pdf-card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
-}
-
-.pdf-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-}
-
-/* Card Header */
-.pdf-card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 22px;
-  cursor: pointer;
-  background: #fafafa;
-  border-bottom: 1px solid #eee;
-  transition: background 0.3s ease;
-}
-
-.pdf-card-header:hover {
-  background: #f0f0f0;
-}
-
-.pdf-card-header h3 {
-  font-size: 1.2rem;
-  color: #333;
-  margin: 0;
-}
-
-.toggle-icon {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #31a1bf;
-}
-
-/* Card Content */
-.pdf-card-content {
-  display: none;
-  flex-direction: column;
-  padding: 15px 25px;
-  background: #fff;
-}
-
-.pdf-card-content.active {
-  display: flex;
-}
-
-/* PDF Item */
-.pdf-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  padding: 10px 0;
-  cursor: pointer;
-  font-size: 1rem;
-  color: #555;
-  transition: color 0.3s ease;
-  position: relative;
-  text-decoration: none; /* remove built-in underline */
-  width: fit-content; /* make underline only as wide as content */
-}
-
-/* Add custom underline */
-.pdf-item::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 4px;
-  width: 100%;
-  height: 1px;
-  background-color: #d6d6d6; /* soft underline */
-  transition: background-color 0.3s ease;
-}
-
-/* Disable hover effect for specific item */
-.pdf-item.no-hover {
-  pointer-events: none; /* disables hover & click */
-  color: #555; /* keeps normal text color */
-  cursor: default;
-}
-
-.pdf-item.no-hover::after {
-  background-color: #d6d6d6 !important; /* keeps soft underline, no hover change */
-}
-
-/* Hover effect */
-.pdf-item:hover,
-.pdf-link:hover {
-  color: #31a1bf;
-}
-
-.pdf-item:hover::after .pdf-link:hover::after {
-  background-color: #31a1bf; /* underline color on hover */
-}
-
-/* PDF Icon */
-.pdf-icon {
-  width: 24px; /* smaller and proportionate */
-  height: 24px;
-  display: inline-block;
-  object-fit: contain;
-  vertical-align: middle;
-  margin-top: 1px; /* fixes slight visual lift */
-  transition: filter 0.3s ease;
-}
-
-/* Hover effect for icon tint */
-.pdf-item:hover .pdf-icon {
-  filter: brightness(0) saturate(100%) invert(52%) sepia(92%) saturate(278%) hue-rotate(145deg)
-    brightness(96%) contrast(90%);
-}
-.pdf-link:hover,
-.pdf-link:hover .pdf-icon {
-  color: #31a1bf;
-  cursor: pointer;
-  filter: brightness(0) saturate(100%) invert(52%) sepia(92%) saturate(278%) hue-rotate(145deg)
-    brightness(96%) contrast(90%);
-}
-
-/* Modal Popup */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  position: relative;
-  background: #fff;
-  width: 90%;
-  max-width: 800px;
-  height: 80%;
-  max-height: 700px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-}
-
-.modal iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 26px;
-  cursor: pointer;
-  color: #333;
-  transition: color 0.3s ease;
-}
-
-.close-btn:hover {
-  color: #31a1bf;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .pdf-card-header h3 {
-    font-size: 1rem;
-  }
-  .pdf-item {
-    font-size: 0.9rem;
-  }
-  .modal-content {
-    width: 95%;
-    height: 85%;
-  }
-  /* ✅ Add this for side spacing on mobile/tablet */
-  .pdf-viewer-list {
-    padding: 0 15px; /* adds 15px space on left & right */
-  }
-}
-.space-between {
-  margin-top: 2rem; /* adds space above the div */
-  margin-bottom: 2rem; /* adds space below the div */
-}
-
-/* =============== MFG PAINT CUSTOM STYLES =============== */
+/* === PDF Viewer Section Styles == */
+/* ===============  Rust Protection CUSTOM STYLES =============== */
 /*For Rust Protection page-cross-section-of-submersiblepump.webp*/
 /* Center image container */
 
@@ -482,6 +483,7 @@
   }
 }
 
+/*###################*/
 /* Card container */
 .dealer-card {
   display: flex;

@@ -1,114 +1,114 @@
 ---
-layout: layout.njk
 title: Manufacturing Paint
+layout: layout.njk
 ---
 
-<section id="mfg-paint" class="mfg-paint section">
+{% include "page-title.njk" %}
+
+<!-- Coating -->
+<div class="section-add">
   <div class="container section-title" data-aos="fade-up">
     <span>Coatings</span>
     <h2>Coatings</h2>
+    <p>We provide durable and reliable coating solutions for lasting protection and performance.</p>
   </div>
 
-  <!-- Mfg-Paint section -->
-  <div class="mfg-paint">
-    <div class="container">
-      <p>
-        Creative Business Systems caters wide range of high-performance Protective coating, rust
-        preventives which fulfil all requirements of wide range of industrial, offshore,
-        petrochemical, fertilizer, sugar mill, pulp & paper, civil requirements. We offer perfect
-        coating systems that includes epoxy, polyurethane, heat resistance, tank liners, surface
-        tolerant and high solid coating. In creative house, you can get total anti corrosive
-        systems, from surface preparation to final coat, under a single roof. We can supply wide
-        range of rust preventive coating, from which the surface can be prevent at initial time,
-        which saves a necessary surface preparation cost & one can do quality application work.
-      </p>
-      <p>
-        The most experienced staff of creative Business Systems are paint technologist, NACE
-        (National Association of Corrosion Engineering) qualified, Corrosion technologist,
-        experienced more then 25 years in specific anti-corrosive field. The company meet
-        international standard ISO 9001:2015 with complete testing standards, every stage production
-        testing, produce high quality coatings.
-      </p>
-      <p>
-        Every unit has it own anti-corrosive requirement, because of different climatic condition,
-        various temperate, chemical reactions, production methods etc.., then it required specific
-        coating systems, we can serve it, as a customised coating system against various conditions.
-      </p>
-
-      <!-- Coating Types Section -->
-      <section id="pdf-viewer" class="pdf-viewer section">
-        <div class="container pdf-viewer-list" data-aos="fade-up" data-aos-delay="100">
-          <div class="pdf-card">
-            <div class="pdf-card-header" onclick="toggleCard(this)">
-              <h3>Catalogue (Click for Details)</h3>
-              <span class="toggle-icon">+</span>
-            </div>
-
-            <div class="pdf-card-content">
-              <div
-                class="pdf-item"
-                onclick="openPDF(event, '/assets/pdfs/rust-prevention-catalogue.pdf', 'Rust Prevention Catalogue')"
-              >
-                <img src="/assets/img/pdf-icon-2.png" alt="PDF Icon" class="pdf-icon" />
-                <strong>Rust Prevention catalogue</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-        {% include "pdf-modal.njk" %}
-      </section>
-
+  <div class="container about-content" data-aos="fade-up">
+    <p>
+      Creative Business Systems caters wide range of high-performance Protective coating, rust
+      preventives which fulfil all requirements of wide range of industrial, offshore,
+      petrochemical, fertilizer, sugar mill, pulp & paper, civil requirements. We offer perfect
+      coating systems that includes epoxy, polyurethane, heat resistance, tank liners, surface
+      tolerant and high solid coating. In creative house, you can get total anti corrosive systems,
+      from surface preparation to final coat, under a single roof. We can supply wide range of rust
+      preventive coating, from which the surface can be prevent at initial time, which saves a
+      necessary surface preparation cost & one can do quality application work.
+    </p>
+    <p>
+      The most experienced staff of creative Business Systems are paint technologist, NACE (National
+      Association of Corrosion Engineering) qualified, Corrosion technologist, experienced more then
+      25 years in specific anti-corrosive field. The company meet international standard ISO
+      9001:2015 with complete testing standards, every stage production testing, produce high
+      quality coatings.
+    </p>
+    <p>
+      Every unit has it own anti-corrosive requirement, because of different climatic condition,
+      various temperate, chemical reactions, production methods etc.., then it required specific
+      coating systems, we can serve it, as a customised coating system against various conditions.
+    </p>
+    <!-- PDF Section -->
+    <section id="pdf-viewer" class="pdf-viewer section">
       <div class="container pdf-viewer-list" data-aos="fade-up" data-aos-delay="100">
         <div class="pdf-card">
           <div class="pdf-card-header" onclick="toggleCard(this)">
-            <h3>Technical Data Sheet (Click for Details)</h3>
+            <h3>Catalogue (Click for Details)</h3>
             <span class="toggle-icon">+</span>
           </div>
 
           <div class="pdf-card-content">
-            {% for category in pdfFiles.categories %}
-            <div class="pdf-item no-hover">
-              <strong>{{ category.title }}</strong>
+            <div
+              class="pdf-item"
+              onclick="openPDF(event, '/assets/pdfs/rust-prevention-catalogue.pdf', 'Rust Prevention Catalogue')"
+            >
+              <img src="/assets/img/pdf-icon-2.png" alt="PDF Icon" class="pdf-icon" />
+              <strong>Rust Prevention catalogue</strong>
             </div>
-
-            <ul>
-              {% for item in category.items %}
-              <div
-                class="pdf-link"
-                onclick="openPDF(event, '/assets/pdfs/{{ item.file }}', '{{ item.name }}')"
-              >
-                <img src="/assets/img/pdf-icon-2.png" alt="PDF Icon" class="pdf-icon" />
-                {{ item.name }}
-              </div>
-              {% endfor %}
-            </ul>
-            {% endfor %}
-
-            
-
+          </div>
+        </div>
+      </div>
       {% include "pdf-modal.njk" %}
+    </section>
 
-      <!-- Product Applications -->
+    <div class="container pdf-viewer-list" data-aos="fade-up" data-aos-delay="100">
+      <div class="pdf-card">
+        <div class="pdf-card-header" onclick="toggleCard(this)">
+          <h3>Technical Data Sheet (Click for Details)</h3>
+          <span class="toggle-icon">+</span>
+        </div>
+
+        <div class="pdf-card-content">
+          {% for category in pdfFiles.categories %}
+          <div class="pdf-item no-hover">
+            <strong>{{ category.title }}</strong>
+          </div>
+
+          <ul>
+            {% for item in category.items %}
+            <div
+              class="pdf-link"
+              onclick="openPDF(event, '/assets/pdfs/{{ item.file }}', '{{ item.name }}')"
+            >
+              <img src="/assets/img/pdf-icon-2.png" alt="PDF Icon" class="pdf-icon" />
+              {{ item.name }}
+            </div>
+            {% endfor %}
+          </ul>
+          {% endfor %} {% include "pdf-modal.njk" %}
+
+          <!-- Product Applications -->
+        </div>
+      </div>
     </div>
+    <!-- End PDF Section -->
   </div>
-</section>
+</div>
+<!-- End Coating -->
 
-<section id="portfolio" class="portfolio section">
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <span>Shade Cards</span>
-    <h2>Shade Cards</h2>
+<!--  Shade Cards -->
+<div class="section-add">
+  <div class="container section-title-add" data-aos="fade-up">
+    <h4>Shade Cards</h4>
   </div>
 
-  <div class="container">
+  <div id="portfolio" class="container portfolio">
     <div class="row gy-4" data-aos="fade-up" data-aos-delay="200">
       {% for card in shade-cards %}
       <div class="col-lg-4 col-md-6 portfolio-item">
-        <img src="{{ card.image }}" class="img-fluid shade-img" alt="{{ card.title }}">
+        <img src="{{ card.image }}" class="img-fluid shade-img" alt="{{ card.title }}" />
         <div class="portfolio-info">
           <h4>{{ card.title }}</h4>
           <p>{{ card.description }}</p>
-          <a href="{{ card.image }}" title="{{ card.title }}"  class="glightbox preview-link">
+          <a href="{{ card.image }}" title="{{ card.title }}" class="glightbox preview-link">
             <i class="bi bi-zoom-in"></i>
           </a>
         </div>
@@ -116,4 +116,5 @@ title: Manufacturing Paint
       {% endfor %}
     </div>
   </div>
-</section>
+</div>
+<!--  End Shade Cards -->
