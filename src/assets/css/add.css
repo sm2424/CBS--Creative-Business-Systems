@@ -36,7 +36,6 @@
 .pdf-card {
   border-radius: 12px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12); /* stronger shadow */
-  border: 1px solid #31a1bf;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   background: #ffffff; /* subtle contrast with page */
@@ -46,6 +45,7 @@
   transform: translateY(-8px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18); /* stronger lift */
   background: #f0faff; /* soft highlight on hover */
+  border: 1px solid #31a1bf;
 }
 
 /* Card Header */
@@ -425,6 +425,29 @@
 /* .blast-cleaning-tab {
   padding: 0 !important;
 } */
+
+/*##############################################
+         We Can Offer Page
+##############################################*/
+
+.card-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.card:hover .card-body {
+  border-color: #31a1bf;
+}
+
+@media (min-width: 992px) {
+  .col-lg-3.col-md-4.col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
 
 /*##############################*/
 /* Footer-Logo styling */
