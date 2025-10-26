@@ -2,7 +2,7 @@
             about-us  page
 ##############################################*/
 
-.about-content {
+.all-content {
   text-align: justify;
 }
 
@@ -223,6 +223,85 @@
   }
 }
 
+/*##############################################
+              Rust-Protection Page
+##############################################*/
+.coating-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 3D Card style for main image */
+.coating-image {
+  height: 360px;
+  width: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25), 0 10px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Full-size image in popup */
+.modal-content {
+  position: relative;
+  background: #fff;
+  width: 60%; /* or keep what you prefer */
+  height: 95vh; /* 👈 fills 95% of the viewport height */
+  max-height: none; /* remove height limit */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Caption text */
+#caption {
+  text-align: center;
+  color: #333;
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 25px;
+  right: 40px;
+  color: #333;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #888;
+}
+
+/* Responsive tweak */
+@media (max-width: 768px) {
+  .coating-image {
+    height: 350px;
+  }
+}
+
+/*##############################################
+        Whatsapp  modal
+##############################################*/
+
 .float {
   position: fixed;
   width: 60px;
@@ -283,6 +362,10 @@
     height: 60px;
   }
 }
+
+/*##############################################
+              page
+##############################################*/
 
 /*##############################*/
 /* Footer-Logo styling */
@@ -410,78 +493,6 @@
 /* ===============  Rust Protection CUSTOM STYLES =============== */
 /*For Rust Protection page-cross-section-of-submersiblepump.webp*/
 /* Center image container */
-
-.coating-images {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* 3D Card style for main image */
-.coating-image {
-  height: 360px;
-  width: auto;
-  border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25), 0 10px 20px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-}
-
-/* Modal styles */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  padding-top: 60px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-}
-
-/* Full-size image in popup */
-.modal-content {
-  position: relative;
-  background: #fff;
-  width: 60%; /* or keep what you prefer */
-  height: 95vh; /* 👈 fills 95% of the viewport height */
-  max-height: none; /* remove height limit */
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-}
-
-/* Caption text */
-#caption {
-  text-align: center;
-  color: #333;
-  margin-top: 15px;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-/* Close button */
-.close {
-  position: absolute;
-  top: 25px;
-  right: 40px;
-  color: #333;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.close:hover {
-  color: #888;
-}
-
-/* Responsive tweak */
-@media (max-width: 768px) {
-  .coating-image {
-    height: 350px;
-  }
-}
 
 /*###################*/
 /* Card container */

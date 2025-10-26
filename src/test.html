@@ -1,108 +1,97 @@
 ---
-title: Test-Manufacturing Paint
+title: Test-Rust Protection Solutions
 layout: layout.njk
 ---
 
 {% include "page-title.njk" %}
 
-<!-- Coating -->
-<div class="section-add">
+<!-- Corrosion Prevention -->
+<section id="rust-protection" class="rust-protection section">
   <div class="container section-title" data-aos="fade-up">
-    <span>Coatings</span>
-    <h2>Coatings</h2>
-    <p>We provide durable and reliable coating solutions for lasting protection and performance.</p>
+    <span>Corrosion Prevention</span>
+    <h2>Corrosion Prevention</h2>
   </div>
 
-  <div class="container about-content" data-aos="fade-up">
-    <p>
-      Creative Business Systems caters wide range of high-performance Protective coating, rust
-      preventives which fulfil all requirements of wide range of industrial, offshore,
-      petrochemical, fertilizer, sugar mill, pulp & paper, civil requirements. We offer perfect
-      coating systems that includes epoxy, polyurethane, heat resistance, tank liners, surface
-      tolerant and high solid coating. In creative house, you can get total anti corrosive systems,
-      from surface preparation to final coat, under a single roof. We can supply wide range of rust
-      preventive coating, from which the surface can be prevent at initial time, which saves a
-      necessary surface preparation cost & one can do quality application work.
-    </p>
-    <p>
-      The most experienced staff of creative Business Systems are paint technologist, NACE (National
-      Association of Corrosion Engineering) qualified, Corrosion technologist, experienced more then
-      25 years in specific anti-corrosive field. The company meet international standard ISO
-      9001:2015 with complete testing standards, every stage production testing, produce high
-      quality coatings.
-    </p>
-    <p>
-      Every unit has it own anti-corrosive requirement, because of different climatic condition,
-      various temperate, chemical reactions, production methods etc.., then it required specific
-      coating systems, we can serve it, as a customised coating system against various conditions.
-    </p>
-    <!-- PDF Section -->
-    <section id="pdf-viewer" class="pdf-viewer section">
-      <div class="container pdf-viewer-list" data-aos="fade-up" data-aos-delay="100">
-        <div class="pdf-card">
-          <div class="pdf-card-header" onclick="toggleCard(this)">
-            <h3>Catalogue (Click for Details)</h3>
-            <span class="toggle-icon">+</span>
-          </div>
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
+        <div class="all-content">
+          <p>
+            Corrosion is a natural process — a degradation of metal when oxygen comes in contact
+            with MS or multi-metal surfaces. Preventing it at an early stage increases product life
+            and reduces surface preparation and labour costs.
+          </p>
 
-          <div class="pdf-card-content">
-            <div
-              class="pdf-item"
-              onclick="openPDF(event, '/assets/pdfs/rust-prevention-catalogue.pdf', 'Rust Prevention Catalogue')"
-            >
-              <img src="/assets/img/pdf-icon-2.png" alt="PDF Icon" class="pdf-icon" />
-              <strong>Rust Prevention catalogue</strong>
-            </div>
-          </div>
+          <p>
+            Every final equipment or machine requires time between 2 to 60 days. We manufacture
+            various types of rust preventives — water-based, solvent-based, and oil-based — solving
+            rusting issues during assembly, transportation, installation, storage, machining, and
+            packing.
+          </p>
+
+          <p>
+            Our water-based corrosion-resistant materials offer rust prevention from 15 days to 20
+            years — the result of 25 years of research, teamwork, and over 2200 laboratory tests.
+          </p>
+
+          <p>This is the most cost-effective and performance-based solution.</p>
+
+          <p class="highlight">We offer a large variety of corrosion prevention solutions.</p>
         </div>
       </div>
-      {% include "pdf-modal.njk" %}
-    </section>
-
-    <div class="container pdf-viewer-list" data-aos="fade-up" data-aos-delay="100">
-      <div class="pdf-card">
-        <div class="pdf-card-header" onclick="toggleCard(this)">
-          <h3>Technical Data Sheet (Click for Details)</h3>
-          <span class="toggle-icon">+</span>
-        </div>
-
-        <div class="pdf-card-content">
-          {% for category in pdfFiles.categories %}
-          <div class="pdf-item no-hover">
-            <strong>{{ category.title }}</strong>
-          </div>
-
-          <ul>
-            {% for item in category.items %}
-            <div
-              class="pdf-link"
-              onclick="openPDF(event, '/assets/pdfs/{{ item.file }}', '{{ item.name }}')"
-            >
-              <img src="/assets/img/pdf-icon-2.png" alt="PDF Icon" class="pdf-icon" />
-              {{ item.name }}
-            </div>
-            {% endfor %}
-          </ul>
-          {% endfor %} {% include "pdf-modal.njk" %}
-
-          <!-- Product Applications -->
+      <div
+        class="col-lg-6 position-relative align-self-start"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        <div class="coating-images" data-aos="fade-up" data-aos-delay="200">
+          <img
+            class="coating-image"
+            src="/assets/img/cross-section-of-submersiblepump.webp"
+            alt="Rust Coating Diagram"
+            title="🔍 Click to view in full size"
+          />
         </div>
       </div>
     </div>
-    <!-- End PDF Section -->
   </div>
-</div>
-<!-- End Coating -->
+</section>
+<!-- End Corrosion Prevention -->
 
-<!--  Shade Cards -->
-<div class="section-add">
-  <div class="container section-title-add" data-aos="fade-up">
-    <h4>Shade Cards</h4>
+<!-- PDF Section -->
+<section id="pdf-viewer" class="pdf-viewer section">
+  <div class="container pdf-viewer-list" data-aos="fade-up" data-aos-delay="100">
+    <div class="pdf-card">
+      <div class="pdf-card-header" onclick="toggleCard(this)">
+        <h3>Types of Coatings (Click for Details)</h3>
+        <span class="toggle-icon">+</span>
+      </div>
+
+      <div class="pdf-card-content">
+        {% for pdf in types-of-coatings %}
+        <div class="pdf-item" onclick="openPDF(event, '{{ pdf.file }}', '{{ pdf.title }}')">
+          <img src="/assets/img/pdf-icon-2.png" alt="PDF Icon" class="pdf-icon" />
+          <strong>{{ pdf.title }}</strong>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
   </div>
 
-  <div id="portfolio" class="container portfolio">
+  {% include "pdf-modal.njk" %} {% include "image-modal.njk" %}
+</section>
+<!-- End PDF Section -->
+
+<!-- Product Applications -->
+<section id="portfolio" class="portfolio section product-applications">
+  <div class="container section-title" data-aos="fade-up">
+    <span>Product Applications</span>
+    <h2>Product Applications</h2>
+  </div>
+
+  <div class="container">
     <div class="row gy-4" data-aos="fade-up" data-aos-delay="200">
-      {% for card in shade-cards %}
+      {% for card in product-application %}
       <div class="col-lg-4 col-md-6 portfolio-item">
         <img src="{{ card.image }}" class="img-fluid shade-img" alt="{{ card.title }}" />
         <div class="portfolio-info">
@@ -116,5 +105,5 @@ layout: layout.njk
       {% endfor %}
     </div>
   </div>
-</div>
-<!--  End Shade Cards -->
+</section>
+<!-- End Product Applications -->
