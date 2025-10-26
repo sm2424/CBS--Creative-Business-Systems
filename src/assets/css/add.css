@@ -403,8 +403,20 @@
 }
 
 /*##############################################
-           Page
+         Application  Page
 ##############################################*/
+
+.rust-gread-blast-cleaning {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+.rust-gread-blast-cleaning:hover {
+  transform: translateY(-5px);
+}
 
 /*##############################*/
 /* Footer-Logo styling */
@@ -533,18 +545,8 @@
   padding: 0 !important;
 }
 
-/* Image -rust-gread-blast-cleaning */
-.rust-gread-blast-cleaning {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s ease;
-}
-.rust-gread-blast-cleaning:hover {
-  transform: translateY(-5px);
-}
+/* Image -rust-gread-blast-cleaning  ################################### */
+
 /* ===========================
    Anti-Corrosive Coatings Page
 =========================== */
