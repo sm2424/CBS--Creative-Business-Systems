@@ -403,7 +403,7 @@
 }
 
 /*##############################################
-         Application  Page
+         Application  Details Page
 ##############################################*/
 
 .rust-gread-blast-cleaning {
@@ -417,6 +417,14 @@
 .rust-gread-blast-cleaning:hover {
   transform: translateY(-5px);
 }
+
+.service-list {
+  text-align: left;
+}
+
+/* .blast-cleaning-tab {
+  padding: 0 !important;
+} */
 
 /*##############################*/
 /* Footer-Logo styling */
@@ -532,18 +540,6 @@
 }
 
 /*==========================Application details page ==========================*/
-.application-details h3 {
-  text-align: left;
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-.service-list {
-  text-align: left;
-}
-
-.blast-cleaning-tab {
-  padding: 0 !important;
-}
 
 /* Image -rust-gread-blast-cleaning  ################################### */
 
