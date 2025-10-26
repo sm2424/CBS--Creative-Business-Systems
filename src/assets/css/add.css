@@ -58,94 +58,31 @@
     height: 60px;
   }
 }
-
+/*##############################################*/
 /* about-us  page*/
-.about-company {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #444;
-  padding: 40px 20px;
-}
-
-.about-company h2 {
-  color: #2b2b2b;
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
-.about-company p {
-  margin-bottom: 15px;
+/*##############################################*/
+.about-content {
   text-align: justify;
 }
 
-.team-strength {
-  text-align: justify;
+.section-add {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 30px 0;
+  scroll-margin-top: 100px;
+  overflow: clip;
 }
 
-.real-assets {
-  font-size: 1.75rem;
+.section-title-add h4 {
+  font-size: 24px;
   font-weight: 700;
-  padding: 20px;
-}
-
-/* Infinity slider css 
-@keyframes slides {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-.logos {
-  overflow: hidden;
-  padding: 30px 0px;
-  white-space: nowrap;
+  margin-bottom: 20px;
+  padding-bottom: 0;
   position: relative;
-}
-
-.logos:before,
-.logos:after {
-  position: absolute;
-  top: 0;
-  content: "";
-  width: 250px;
-  height: 100%;
   z-index: 2;
 }
 
-.logos:before {
-  left: 0;
-  background: linear-gradient(
-    to left,
-    rgba(255, 255, 255, 0),
-    rgb(255, 255, 255)
-  );
-}
-
-.logos:after {
-  right: 0;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0),
-    rgb(255, 255, 255)
-  );
-}
-
-.logo_items {
-  display: inline-block;
-  animation: 35s slides infinite linear;
-}
-
-.logos:hover .logo_items {
-  animation-play-state: paused;
-}
-
-.logo_items img {
-  height: 100px;
-} */
-
+/*##############################*/
 /* Footer-Logo styling */
 .footer-logo {
   width: 210px; /* Set your desired width */
