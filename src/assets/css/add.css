@@ -875,3 +875,18 @@ Header.njk => navbar active link issue
 .navmenu a.active:hover {
   text-shadow: 0 0 10px #2b9cb8;
 }
+
+/*############################
+Index page services
+#############################*/
+.service-card {
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+/* Smooth fade animation */
+.service-card .icon i,
+.service-card h3,
+.service-card p {
+  transition: opacity 0.8s ease;
+}
