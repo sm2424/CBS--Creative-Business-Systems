@@ -1023,9 +1023,10 @@ section,
   margin-bottom: 0;
 }
 
-.featured-services .service-item:hover {
+/* Change */
+/* .featured-services .service-item:hover {   
   transform: translateY(-10px);
-}
+} */
 
 .featured-services .service-item:hover h4 a {
   color: var(--accent-color);
