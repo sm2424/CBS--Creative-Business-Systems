@@ -3,7 +3,9 @@ layout: layout.njk
 title: Our Blog
 ---
 
-<section id="blog" class="blog section">
+{% include "page-title.njk" %}
+
+<div class="section-add">
   <div class="container section-title" data-aos="fade-up">
     <span>Blog</span>
     <h2>{{ blog.title }}</h2>
@@ -27,4 +29,4 @@ title: Our Blog
       {% endfor %}
     </div>
   </div>
-</section>
+</div>
