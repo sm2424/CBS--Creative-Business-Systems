@@ -8,105 +8,28 @@ parents:
 
 {% include "page-title.njk" %}
 
-<!-- We Can Offer Section -->
+<!-- Auto Services Section -->
 <div class="section-add">
   <div class="container section-title" data-aos="fade-up">
-    <span>We Can Offer</span>
-    <h2>Our Service Categories</h2>
+    <span>Services</span>
+    <h2>We Can Offer</h2>
     <p>Select a category to explore our specialized industrial solutions.</p>
   </div>
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div class="row gy-4">
-      <!-- A -->
-      <div class="col-lg-3 col-md-4 col-6">
-        <a href="/anti-corrosive-coatings/" class="card text-center shadow-sm border-0 h-100">
-          <div class="card-body">
-            <h5 class="card-title">Anti-Corrosive Coatings</h5>
+  <section id="services" class="services section">
+    <div class="container">
+      <div class="row gy-4">
+        {% for i in (1..12) %}
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item position-relative service-card">
+            <div class="icon"><i class="bi bi-activity"></i></div>
+            <a href="#" class="stretched-link"><h3>Service {{ i }}</h3></a>
+            <p>Loading description...</p>
           </div>
-        </a>
-      </div>
-
-      <!-- B -->
-      <div class="col-lg-3 col-md-4 col-6">
-        <a href="/industrial-flooring/" class="card text-center shadow-sm border-0 h-100">
-          <div class="card-body">
-            <h5 class="card-title">Industrial Flooring</h5>
-          </div>
-        </a>
-      </div>
-
-      <!-- C -->
-      <div class="col-lg-3 col-md-4 col-6">
-        <a href="/hygienic-food-grade-coating/" class="card text-center shadow-sm border-0 h-100">
-          <div class="card-body">
-            <h5 class="card-title">Hygienic Food Grade Coating</h5>
-          </div>
-        </a>
-      </div>
-
-      <!-- D -->
-      <div class="col-lg-3 col-md-4 col-6">
-        <a href="/heat-resistant-coating/" class="card text-center shadow-sm border-0 h-100">
-          <div class="card-body">
-            <h5 class="card-title">Heat Resistant Coating</h5>
-          </div>
-        </a>
-      </div>
-
-      <!-- E -->
-      <div class="col-lg-3 col-md-4 col-6">
-        <a href="/blasting/" class="card text-center shadow-sm border-0 h-100">
-          <div class="card-body">
-            <h5 class="card-title">Blasting</h5>
-          </div>
-        </a>
-      </div>
-
-      <!-- F -->
-      <div class="col-lg-3 col-md-4 col-6">
-        <a href="/zinc-aluminum-spray/" class="card text-center shadow-sm border-0 h-100">
-          <div class="card-body">
-            <h5 class="card-title">Zinc / Aluminum Spray Application</h5>
-          </div>
-        </a>
-      </div>
-
-      <!-- G -->
-      <div class="col-lg-3 col-md-4 col-6">
-        <a href="/tile-grouting/" class="card text-center shadow-sm border-0 h-100">
-          <div class="card-body">
-            <h5 class="card-title">Tile Grouting</h5>
-          </div>
-        </a>
-      </div>
-
-      <!-- H -->
-      <div class="col-lg-3 col-md-4 col-6">
-        <a href="/bituminous/" class="card text-center shadow-sm border-0 h-100">
-          <div class="card-body">
-            <h5 class="card-title">Bituminous</h5>
-          </div>
-        </a>
-      </div>
-
-      <!-- K -->
-      <div class="col-lg-3 col-md-4 col-6">
-        <a href="/fertilizer-plants/" class="card text-center shadow-sm border-0 h-100">
-          <div class="card-body">
-            <h5 class="card-title">Fertilizer Plants</h5>
-          </div>
-        </a>
-      </div>
-
-      <!-- L -->
-      <div class="col-lg-3 col-md-4 col-6">
-        <a href="/rust-sealer-coatings/" class="card text-center shadow-sm border-0 h-100">
-          <div class="card-body">
-            <h5 class="card-title">Rust Sealer Coatings</h5>
-          </div>
-        </a>
+        </div>
+        {% endfor %}
       </div>
     </div>
-  </div>
+  </section>
+  <div class="container all-content section-title-add" data-aos="fade-up"></div>
 </div>
+<!-- End Auto Services Section -->
