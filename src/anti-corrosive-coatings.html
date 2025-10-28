@@ -9,15 +9,17 @@ parents:
 ---
 
 {% include "page-title.njk" %}
-<section id="anti-corrosive" class="section light-background">
-  <div class="container" data-aos="fade-up">
-    <div class="section-title">
-      <span>Protective Coating Solutions</span>
-      <h2>Anti-Corrosive Coatings</h2>
-      <p>Explore various coating solutions for industrial and corrosive environments.</p>
-    </div>
 
-    {% for section in anti-corrosive.sections %}
+<!-- Anti Corrosive Coating  Section -->
+<div class="section-add">
+  <div class="container section-title" data-aos="fade-up">
+    <span>Protective Coating Solutions</span>
+    <h2>Anti-Corrosive Coatings</h2>
+    <p>Explore various coating solutions for industrial and corrosive environments.</p>
+  </div>
+  <section id="services" class="services section">
+    <div class="container">
+     {% for section in anti-corrosive.sections %}
     <div class="content mb-5">
       <h4 class="label-text">
         <span class="number">{{ section.id }}.</span>
@@ -63,4 +65,8 @@ parents:
     </div>
     {% endfor %}
   </div>
-</section>
+    </div>
+  </section>
+  <div class="container all-content section-title-add" data-aos="fade-up"></div>
+</div>
+<!-- End Anti Corrosive Coating  Section -->
