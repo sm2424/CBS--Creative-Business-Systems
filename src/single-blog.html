@@ -5,7 +5,19 @@ pagination:
   size: 1
   alias: post
 permalink: 'blog/{{ post.id }}/index.html'
+eleventyComputed:
+  meta:
+    title: '{{ post.title }}'
+    description: 'Learn why protective coatings are essential for modern industries and how they improve durability, safety, and performance.'
 ---
+
+<meta property="og:title" content="{{ post.title }}" />
+<meta
+  property="og:description"
+  content="Importance of protective coatings in industrial applications."
+/>
+<meta property="og:image" content="{{ post.image }}" />
+<meta name="twitter:card" content="summary_large_image" />
 
 <div class="page-title">
   <div class="container d-lg-flex justify-content-between align-items-center">
@@ -20,27 +32,102 @@ permalink: 'blog/{{ post.id }}/index.html'
   </div>
 </div>
 
-<section id="single-blog" class="section light-background">
+<section id="single-blog" class="section">
   <div class="container" data-aos="fade-up">
-    <!-- 🖼️ Blog Image -->
-    <div class="text-center mb-4">
-      <img
-        src="{{ post.image }}"
-        alt="{{ post.title }}"
-        class="img-fluid rounded shadow-sm mb-3"
-        style="max-height: 400px; object-fit: cover"
-      />
-      <p class="text-muted small">{{ post.date }} | {{ post.author }}</p>
-    </div>
+    <!-- 🧾 Blog Article -->
+    <article class="blog-card mb-5">
+      <div class="blog-hero">
+        <img src="{{ post.image }}" alt="{{ post.title }}" class="blog-image" loading="lazy" />
+      </div>
 
-    <!-- 📝 Blog Content -->
-    <div class="blog-content">
-      {% for paragraph in post.content %}
-      <p>{{ paragraph }}</p>
-      {% endfor %}
-    </div>
+      <div class="blog-content">
+        <h2 class="blog-title">{{ post.title }}</h2>
+        <p class="text-muted small">{{ post.date }} | {{ post.author }}</p>
 
-    <!-- 🧭 Navigation -->
+        <p>
+          In today’s industrial landscape, protective coatings play a vital role in ensuring
+          durability, performance, and long-term reliability of assets. From bridges and pipelines
+          to vehicles and machinery, these coatings are the first line of defense against corrosion,
+          abrasion, and environmental damage.
+        </p>
+
+        <p>
+          <strong>Protective coatings</strong>
+          are specially engineered layers applied to surfaces such as metals, concrete, or plastic
+          to shield them from corrosion, wear, and chemical attack. Depending on the environment,
+          these may include epoxy, polyurethane, zinc-rich, or ceramic coatings that enhance surface
+          strength and longevity.
+        </p>
+
+        <h3>Why Protective Coatings Matter</h3>
+        <p>
+          <strong>1. Corrosion Prevention:</strong>
+          Coatings act as a barrier between the material and external factors such as water, oxygen,
+          and salt—effectively stopping rust and degradation.
+        </p>
+        <p>
+          <strong>2. Longer Equipment Life:</strong>
+          With proper coating systems, industries can significantly extend the lifespan of
+          machinery, reducing downtime and costly replacements.
+        </p>
+        <p>
+          <strong>3. Safety & Reliability:</strong>
+          In sectors like oil & gas or aerospace, equipment failure can be catastrophic. Protective
+          coatings ensure structural integrity and operational safety.
+        </p>
+        <p>
+          <strong>4. Aesthetic Enhancement:</strong>
+          Besides protection, coatings improve the visual appeal of assets—helping companies
+          maintain a professional and polished image.
+        </p>
+        <p>
+          <strong>5. Environmental Benefits:</strong>
+          Modern low-VOC coating solutions promote sustainability by reducing waste and extending
+          the service life of industrial components.
+        </p>
+
+        <h3>Key Industrial Applications</h3>
+        <ul>
+          <li>
+            <strong>Oil & Gas:</strong>
+            Offshore platforms, pipelines, and storage tanks.
+          </li>
+          <li>
+            <strong>Construction:</strong>
+            Bridges, steel structures, and concrete protection.
+          </li>
+          <li>
+            <strong>Marine:</strong>
+            Ships, docks, and coastal infrastructure.
+          </li>
+          <li>
+            <strong>Automotive:</strong>
+            Vehicle underbody, chassis, and external panels.
+          </li>
+          <li>
+            <strong>Aerospace:</strong>
+            Aircraft surfaces and engine components.
+          </li>
+        </ul>
+
+        <h3>Choosing the Right Coating</h3>
+        <p>
+          The selection of a protective coating depends on environmental exposure, substrate type,
+          and maintenance goals. Working with experienced coating professionals ensures proper
+          surface preparation, application, and performance testing for reliable protection.
+        </p>
+
+        <h3>Conclusion</h3>
+        <p>
+          The importance of protective coatings in modern industries cannot be overstated. They
+          provide cost-effective solutions for asset preservation, enhance safety, and contribute to
+          sustainable operations. Investing in the right coating today ensures your infrastructure
+          remains strong and efficient for years to come.
+        </p>
+      </div>
+    </article>
+
+    <!-- 🧭 Blog Navigation -->
     <div
       class="blog-navigation d-flex justify-content-between align-items-center mt-5 pt-4 border-top"
     >
@@ -60,57 +147,77 @@ permalink: 'blog/{{ post.id }}/index.html'
     </div>
 
     <!-- 📰 Related Posts -->
-    <div class="related-posts mt-5 pt-5 border-top" data-aos="fade-up" data-aos-delay="200">
-      <h3 class="text-center mb-4">Related Posts</h3>
-      <div class="row gy-4">
-        {% assign otherPosts = blog.posts | where: "id", post.id, true %} {% assign related =
-        blog.posts | where: "id", post.id, false | sample: 3 %} {% for relatedPost in related %}
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <a href="/blog/{{ relatedPost.id }}/">
+    <div class="related-posts mt-5 pt-5 border-top" data-aos="fade-up" data-aos-delay="200"></div>
+  </div>
+
+  <!-- 🌟 Testimonials / Related Blogs Slider -->
+  <section id="testimonials" class="testimonials section">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div
+        class="swiper init-swiper"
+        data-speed="600"
+        data-delay="5000"
+        data-breakpoints='{ "320": { "slidesPerView": 1, "spaceBetween": 40 }, "1200": { "slidesPerView": 3, "spaceBetween": 40 } }'
+      >
+        <script type="application/json" class="swiper-config">
+          {
+            "loop": true,
+            "speed": 600,
+            "autoplay": { "delay": 5000 },
+            "slidesPerView": "auto",
+            "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true },
+            "breakpoints": {
+              "320": { "slidesPerView": 1, "spaceBetween": 40 },
+              "768": { "slidesPerView": 2, "spaceBetween": 30 },
+              "1200": { "slidesPerView": 3, "spaceBetween": 20 }
+            }
+          }
+        </script>
+
+        <div class="swiper-wrapper">
+          {% for post in blog.posts %}
+          <div class="swiper-slide blog-card">
+            <a href="/blog/{{ post.id }}/" class="blog-link">
               <img
-                src="{{ relatedPost.image }}"
-                alt="{{ relatedPost.title }}"
-                class="card-img-top"
-                style="height: 200px; object-fit: cover"
+                src="{{ post.image }}"
+                alt="{{ post.title }}"
+                class="blog-image"
+                loading="lazy"
               />
+              <div class="blog-content">
+                <h3 class="blog-title">{{ post.title }}</h3>
+                <p class="text-muted small mb-1">{{ post.date }} — {{ post.author }}</p>
+                <p class="blog-description">{{ post.content[0] | truncate: 100 }}</p>
+                <span class="read-more">Read More →</span>
+              </div>
             </a>
-            <div class="card-body">
-              <h5 class="card-title">{{ relatedPost.title }}</h5>
-              <p class="card-text text-muted small">
-                {{ relatedPost.date }} — {{ relatedPost.author }}
-              </p>
-              <p class="card-text">{{ relatedPost.content[0] | truncate: 120 }}</p>
-              <a href="/blog/{{ relatedPost.id }}/" class="btn btn-sm btn-outline-primary">
-                Read More →
-              </a>
-            </div>
           </div>
+          {% endfor %}
         </div>
-        {% endfor %}
+
+        <div class="swiper-pagination"></div>
       </div>
     </div>
-  </div>
+  </section>
 </section>
 
+<!-- ✅ Optimized Scoped CSS -->
 <style>
-  .blog-content p {
-    line-height: 1.8;
-    margin-bottom: 1rem;
+  :where(#single-blog) .blog-hero .blog-image {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
   }
-  .related-posts h3 {
-    font-weight: 700;
-    color: #333;
+  @media (max-width: 768px) {
+    :where(#single-blog) .blog-hero .blog-image {
+      height: 320px;
+    }
   }
-  .related-posts .card {
-    border: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .related-posts .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  }
-  .blog-navigation .btn {
-    min-width: 120px;
+  @media (max-width: 480px) {
+    :where(#single-blog) .blog-hero .blog-image {
+      height: 240px;
+    }
   }
 </style>

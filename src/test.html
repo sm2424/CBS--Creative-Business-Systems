@@ -1,37 +1,19 @@
----
-layout: layout.njk
-title: Our Blog
----
-
-{% include "page-title.njk" %}
-
-<div class="section-add">
-  <div class="container section-title" data-aos="fade-up">
-    <span>Blog</span>
-    <h2>{{ blog.title }}</h2>
-  </div>
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div class="row gy-4">
-      {% for post in blog.posts %}
-      <div class="col-lg-4 col-md-6">
-        <a
-          href="/blog/{{ post.id }}/"
-          style="text-decoration: none; color: inherit; display: block"
-        >
-          <div class="blog-card">
-            <img src="{{ post.image }}" alt="{{ post.title }}" class="blog-image" />
-
-            <div class="blog-content">
-              <h3 class="blog-title">{{ post.title }}</h3>
-              <p class="text-muted small">{{ post.date }} — {{ post.author }}</p>
-              <p class="blog-description">{{ post.content[0] | truncate: 100 }}</p>
-              <span class="read-more">Read More</span>
-            </div>
-          </div>
-        </a>
+<h3 class="text-center mb-4">Related Posts</h3>
+<div class="row gy-4">
+  {% assign related = blog.posts | where: "id", post.id, false | sample: 3 %} {% for relatedPost in
+  related %}
+  <div class="col-md-4">
+    <div class="blog-card h-100">
+      <a href="/blog/{{ relatedPost.id }}/">
+        <img src="{{ relatedPost.image }}" alt="{{ relatedPost.title }}" class="blog-image" />
+      </a>
+      <div class="blog-content">
+        <h5 class="blog-title">{{ relatedPost.title }}</h5>
+        <p class="text-muted small">{{ relatedPost.date }} — {{ relatedPost.author }}</p>
+        <p class="blog-description">{{ relatedPost.content[0] | truncate: 120 }}</p>
+        <a href="/blog/{{ relatedPost.id }}/" class="read-more">Read More →</a>
       </div>
-      {% endfor %}
     </div>
   </div>
+  {% endfor %}
 </div>

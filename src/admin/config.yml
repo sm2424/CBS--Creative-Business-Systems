@@ -17,14 +17,20 @@ collections:
         label: 'Blog Data'
         name: 'blog'
         fields:
-          - label: 'Title'
-            name: 'title'
-            widget: 'string'
+          - { label: 'Title', name: 'title', widget: 'string' }
+
           - label: 'Posts'
             name: 'posts'
             widget: 'list'
             fields:
-              - { label: 'ID', name: 'id', widget: 'string' }
+              - label: 'ID'
+                name: 'id'
+                widget: 'string'
+                hint: 'Auto-generated from title if left blank'
+                required: false
+                pattern:
+                  - '^[a-z0-9-]+$'
+                  - 'Use lowercase letters, numbers, and hyphens only'
               - { label: 'Title', name: 'title', widget: 'string' }
               - { label: 'Date', name: 'date', widget: 'datetime', format: 'MMMM DD, YYYY' }
               - { label: 'Author', name: 'author', widget: 'string', default: 'Team ChemGuard' }
@@ -32,7 +38,13 @@ collections:
               - label: 'Content'
                 name: 'content'
                 widget: 'list'
+                summary: '{{fields.paragraph}}'
                 field:
                   label: 'Paragraph'
                   name: 'paragraph'
                   widget: 'text'
+
+    slug:
+      encoding: 'ascii'
+      clean_accents: true
+      sanitize_replacement: '-'
