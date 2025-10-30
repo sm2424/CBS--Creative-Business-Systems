@@ -689,7 +689,8 @@
   transition: color 0.2s ease; /* smooth color change */
 }
 /* Hover effect: change color to #31a1bf */
-.blog-card:hover .blog-title {
+.blog-card:hover .blog-title,
+.blog-card:hover .read-more {
   color: #31a1bf;
 }
 

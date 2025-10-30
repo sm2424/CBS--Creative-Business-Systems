@@ -1,28 +1,37 @@
 ---
-title: Test-Application Details
 layout: layout.njk
+title: Our Blog
 ---
 
 {% include "page-title.njk" %}
 
-<section id="services" class="services section light-background">
+<div class="section-add">
   <div class="container section-title" data-aos="fade-up">
-    <span>Services</span>
-    <h2>Auto-Rotating Services</h2>
-    <p>Six cards stay fixed — only the content fades smoothly over time.</p>
+    <span>Blog</span>
+    <h2>{{ blog.title }}</h2>
   </div>
 
-  <div class="container">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
     <div class="row gy-4">
-      {% for i in (1..6) %}
+      {% for post in blog.posts %}
       <div class="col-lg-4 col-md-6">
-        <div class="service-item position-relative service-card">
-          <div class="icon"><i class="bi bi-activity"></i></div>
-          <a href="#" class="stretched-link"><h3>Service {{ i }}</h3></a>
-          <p>Loading description...</p>
-        </div>
+        <a
+          href="/blog/{{ post.id }}/"
+          style="text-decoration: none; color: inherit; display: block"
+        >
+          <div class="blog-card">
+            <img src="{{ post.image }}" alt="{{ post.title }}" class="blog-image" />
+
+            <div class="blog-content">
+              <h3 class="blog-title">{{ post.title }}</h3>
+              <p class="text-muted small">{{ post.date }} — {{ post.author }}</p>
+              <p class="blog-description">{{ post.content[0] | truncate: 100 }}</p>
+              <span class="read-more">Read More</span>
+            </div>
+          </div>
+        </a>
       </div>
       {% endfor %}
     </div>
   </div>
-</section>
+</div>
