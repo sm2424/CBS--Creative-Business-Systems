@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: main # or "master" if your repo uses that
 
-media_folder: 'src/assets/img/blog' # where uploaded images are stored
-public_folder: '/assets/img/blog' # public URL path to images
+media_folder: 'src/assets/img/blog'
+public_folder: '/assets/img/blog'
 
 collections:
   - name: 'blog'
@@ -22,15 +22,13 @@ collections:
           - label: 'Posts'
             name: 'posts'
             widget: 'list'
+            slug: '{{title}}' # ✅ FIXED: now a valid string template
             fields:
               - label: 'ID'
                 name: 'id'
                 widget: 'string'
-                hint: 'Auto-generated from title if left blank'
-                required: false
-                pattern:
-                  - '^[a-z0-9-]+$'
-                  - 'Use lowercase letters, numbers, and hyphens only'
+                default: '{{slug}}' # ✅ auto-fills ID from title slug
+                hint: 'Auto-generated from title (can be edited if needed)'
               - { label: 'Title', name: 'title', widget: 'string' }
               - { label: 'Date', name: 'date', widget: 'datetime', format: 'MMMM DD, YYYY' }
               - { label: 'Author', name: 'author', widget: 'string', default: 'Team ChemGuard' }
@@ -43,8 +41,3 @@ collections:
                   label: 'Paragraph'
                   name: 'paragraph'
                   widget: 'text'
-
-    slug:
-      encoding: 'ascii'
-      clean_accents: true
-      sanitize_replacement: '-'
