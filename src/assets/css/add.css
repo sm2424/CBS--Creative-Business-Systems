@@ -910,3 +910,166 @@ Index page services
 .service-card p {
   transition: opacity 0.8s ease;
 }
+
+/* #########################################################
+                    Index.html page Hero banner 
+/* ########################################################*/
+.hero-banner-img {
+  width: 100%;
+  padding-bottom: 60px;
+}
+
+.laurel-row {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+
+.laurel-item {
+  position: relative;
+  width: 200px;
+  height: 120px;
+  text-align: center;
+}
+
+.laurel-item img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+  /* Golden color filter */
+  filter: brightness(0) saturate(100%) invert(55%) sepia(74%) saturate(641%) hue-rotate(3deg)
+    brightness(98%) contrast(93%);
+}
+
+.laurel-item h3 {
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-weight: 600;
+  font-size: 1.28rem;
+  color: #31a1bf;
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+  .laurel-row {
+    gap: 10px;
+  }
+
+  .laurel-item {
+    width: 140px;
+    height: 120px;
+  }
+
+  .laurel-item h3 {
+    font-size: 0.8rem;
+  }
+}
+
+/*------------- header top -------------------- */
+
+.phone-icon,
+.email-icon {
+  margin-right: 6px; /* spacing instead of &nbsp; */
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #31a1bf;
+  padding: 10px 10px;
+  /* border-bottom: 2px solid red; */
+}
+
+.header-top .header-left .contact-info .phone img,
+.header-top .header-left .contact-info .email img {
+  width: 20px;
+  /* Adjust as needed */
+  height: auto;
+  /* Maintain aspect ratio */
+  margin-right: 5px;
+  /* Optional: Add some spacing between the image and the phone number */
+  filter: invert(100%);
+  /* Set the color of the image to white */
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.phone,
+.email {
+  color: #fff;
+  margin-right: 10px;
+  display: flex;
+  font-weight: bold;
+}
+
+.header-right {
+  display: flex;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  margin-left: 4px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.header-right .social-icons .social-icon img {
+  width: 20px;
+  height: auto;
+}
+
+/* change in line number 8231 in main.css */
+
+/* Media Query for small screens */
+@media screen and (max-width: 600px) {
+  .header-top {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px 10px;
+  }
+
+  .contact-info span {
+    display: flex;
+    align-items: center; /* ✅ centers icon + text on same line */
+    font-size: 15px;
+  }
+
+  .phone-icon,
+  .email-icon {
+    font-size: 15px;
+  }
+
+  .header-left {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .header-right {
+    display: none;
+  }
+}

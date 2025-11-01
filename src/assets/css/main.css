@@ -244,6 +244,7 @@ h6 {
   padding: 15px 0;
   transition: all 0.5s;
   z-index: 997;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* ✅ 3D Effect Add-Change */
 }
 
 .header .logo {
