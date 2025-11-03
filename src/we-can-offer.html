@@ -6,17 +6,15 @@ parents:
     url: /paint-application/
 ---
 
-{% include "page-title.njk" %}
-
 <!-- Auto Services Section -->
 <div class="section-add">
-  <div class="container section-title" data-aos="fade-up">
+  <div class="section-title" data-aos="fade-up">
     <span>Services</span>
     <h2>We Can Offer</h2>
     <p>Select a category to explore our specialized industrial solutions.</p>
   </div>
   <section id="services" class="services section">
-    <div class="container">
+    <div>
       <div class="row gy-4">
         {% for i in (1..12) %}
         <div class="col-lg-4 col-md-6">
@@ -30,6 +28,6 @@ parents:
       </div>
     </div>
   </section>
-  <div class="container all-content section-title-add" data-aos="fade-up"></div>
+  <div class="all-content section-title-add" data-aos="fade-up"></div>
 </div>
 <!-- End Auto Services Section -->

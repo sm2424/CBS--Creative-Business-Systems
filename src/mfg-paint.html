@@ -3,17 +3,15 @@ title: Manufacturing Paint
 layout: layout.njk
 ---
 
-{% include "page-title.njk" %}
-
 <!-- Coating -->
 <div class="section-add">
-  <div class="container section-title" data-aos="fade-up">
+  <div class="section-title" data-aos="fade-up">
     <span>Coatings</span>
     <h2>Coatings</h2>
     <p>We provide durable and reliable coating solutions for lasting protection and performance.</p>
   </div>
 
-  <div class="container all-content" data-aos="fade-up">
+  <div class="all-content" data-aos="fade-up">
     <p>
       Creative Business Systems caters wide range of high-performance Protective coating, rust
       preventives which fulfil all requirements of wide range of industrial, offshore,
@@ -38,7 +36,7 @@ layout: layout.njk
     </p>
     <!-- PDF Section -->
     <section id="pdf-viewer" class="pdf-viewer section">
-      <div class="container pdf-viewer-list" data-aos="fade-up" data-aos-delay="100">
+      <div class="pdf-viewer-list" data-aos="fade-up" data-aos-delay="100">
         <div class="pdf-card">
           <div class="pdf-card-header" onclick="toggleCard(this)">
             <h3>Catalogue (Click for Details)</h3>
@@ -59,7 +57,7 @@ layout: layout.njk
       {% include "pdf-modal.njk" %}
     </section>
 
-    <div class="container pdf-viewer-list" data-aos="fade-up" data-aos-delay="100">
+    <div class="pdf-viewer-list" data-aos="fade-up" data-aos-delay="100">
       <div class="pdf-card">
         <div class="pdf-card-header" onclick="toggleCard(this)">
           <h3>Technical Data Sheet (Click for Details)</h3>
@@ -96,12 +94,12 @@ layout: layout.njk
 
 <!--  Shade Cards -->
 <div class="section-add">
-  <div class="container section-title" data-aos="fade-up">
+  <div class="section-title" data-aos="fade-up">
     <span>Shade Cards</span>
     <h2>Shade Cards</h2>
   </div>
 
-  <div id="portfolio" class="container portfolio">
+  <div id="portfolio" class="portfolio">
     <div class="row gy-4" data-aos="fade-up" data-aos-delay="200">
       {% for card in shade-cards %}
       <div class="col-lg-4 col-md-6 portfolio-item">

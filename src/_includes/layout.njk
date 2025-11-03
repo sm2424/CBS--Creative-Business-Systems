@@ -44,9 +44,19 @@
 
   {% include 'header.njk' %}
   <main class="main">
-    {% include 'whatsapp.njk' %}
+
+  {% if showPageTitle != false %}
+    {% include "page-title.njk" %}
+    <div class="container">
+      {% include 'whatsapp.njk' %}
+      {{ content | safe }}
+    </div>
+  {% else %}
     {{ content | safe }}
-  </main>
+  {% endif %}
+
+</main>
+
 
   {% include 'footer.njk' %}
 

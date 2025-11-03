@@ -3,11 +3,9 @@ layout: layout.njk
 title: Rust Protection Solutions
 ---
 
-{% include "page-title.njk" %}
-
 <!-- Corrosion Prevention -->
 <section class="section-add">
-  <div class="container section-title" data-aos="fade-up">
+  <div class="section-title" data-aos="fade-up">
     <span>Corrosion Prevention</span>
     <h2>Corrosion Prevention</h2>
     <p>
@@ -16,46 +14,45 @@ title: Rust Protection Solutions
     </p>
   </div>
 
-  <div class="container">
-    <div class="row gy-4">
-      <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
-        <div class="all-content">
-          <p>
-            Corrosion is a natural process — a degradation of metal when oxygen comes in contact
-            with MS or multi-metal surfaces. Preventing it at an early stage increases product life
-            and reduces surface preparation and labour costs.
-          </p>
+  <div class="row gy-4">
+    <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
+      <div class="all-content">
+        <p>
+          Corrosion is a natural process — a degradation of metal when oxygen comes in contact with
+          MS or multi-metal surfaces. Preventing it at an early stage increases product life and
+          reduces surface preparation and labour costs.
+        </p>
 
-          <p>
-            Every final equipment or machine requires time between 2 to 60 days. We manufacture
-            various types of rust preventives — water-based, solvent-based, and oil-based — solving
-            rusting issues during assembly, transportation, installation, storage, machining, and
-            packing.
-          </p>
+        <p>
+          Every final equipment or machine requires time between 2 to 60 days. We manufacture
+          various types of rust preventives — water-based, solvent-based, and oil-based — solving
+          rusting issues during assembly, transportation, installation, storage, machining, and
+          packing.
+        </p>
 
-          <p>
-            Our water-based corrosion-resistant materials offer rust prevention from 15 days to 20
-            years — the result of 25 years of research, teamwork, and over 2200 laboratory tests.
-          </p>
+        <p>
+          Our water-based corrosion-resistant materials offer rust prevention from 15 days to 20
+          years — the result of 25 years of research, teamwork, and over 2200 laboratory tests.
+        </p>
 
-          <p>This is the most cost-effective and performance-based solution.</p>
+        <p>This is the most cost-effective and performance-based solution.</p>
 
-          <p class="highlight">We offer a large variety of corrosion prevention solutions.</p>
-        </div>
+        <p class="highlight">We offer a large variety of corrosion prevention solutions.</p>
       </div>
-      <div
-        class="col-lg-6 position-relative align-self-start"
-        data-aos="fade-up"
-        data-aos-delay="100"
-      >
-        <div class="coating-images" data-aos="fade-up" data-aos-delay="200">
-          <img
-            class="coating-image"
-            src="/assets/img/cross-section-of-submersiblepump.webp"
-            alt="Rust Coating Diagram"
-            title="🔍 Click to view in full size"
-          />
-        </div>
+    </div>
+
+    <div
+      class="col-lg-6 position-relative align-self-start"
+      data-aos="fade-up"
+      data-aos-delay="100"
+    >
+      <div class="coating-images" data-aos="fade-up" data-aos-delay="200">
+        <img
+          class="coating-image"
+          src="/assets/img/cross-section-of-submersiblepump.webp"
+          alt="Rust Coating Diagram"
+          title="🔍 Click to view in full size"
+        />
       </div>
     </div>
   </div>
@@ -64,7 +61,7 @@ title: Rust Protection Solutions
 
 <!-- PDF Section -->
 <section id="pdf-viewer" class="pdf-viewer section">
-  <div class="container pdf-viewer-list" data-aos="fade-up" data-aos-delay="100">
+  <div class="pdf-viewer-list" data-aos="fade-up" data-aos-delay="100">
     <div class="pdf-card">
       <div class="pdf-card-header" onclick="toggleCard(this)">
         <h3>Types of Coatings (Click for Details)</h3>
@@ -88,26 +85,25 @@ title: Rust Protection Solutions
 
 <!-- Product Applications -->
 <section id="portfolio" class="portfolio section product-applications">
-  <div class="container section-title" data-aos="fade-up">
+  <div class="section-title" data-aos="fade-up">
     <span>Product Applications</span>
     <h2>Product Applications</h2>
   </div>
 
-  <div class="container">
-    <div class="row gy-4" data-aos="fade-up" data-aos-delay="200">
-      {% for card in product-application %}
-      <div class="col-lg-4 col-md-6 portfolio-item">
-        <img src="{{ card.image }}" class="img-fluid shade-img" alt="{{ card.title }}" />
-        <div class="portfolio-info">
-          <h4>{{ card.title }}</h4>
-          <p>{{ card.description }}</p>
-          <a href="{{ card.image }}" title="{{ card.title }}" class="glightbox preview-link">
-            <i class="bi bi-zoom-in"></i>
-          </a>
-        </div>
+  <div class="row gy-4" data-aos="fade-up" data-aos-delay="200">
+    {% for card in product-application %}
+    <div class="col-md-3 col-sm-6 portfolio-item">
+      <img src="{{ card.image }}" class="img-fluid shade-img" alt="{{ card.title }}" />
+      <div class="portfolio-info">
+        <h4>{{ card.title }}</h4>
+        <p>{{ card.description }}</p>
+        <a href="{{ card.image }}" title="{{ card.title }}" class="glightbox preview-link">
+          <i class="bi bi-zoom-in"></i>
+        </a>
       </div>
-      {% endfor %}
     </div>
+    {% endfor %}
   </div>
 </section>
+
 <!-- End Product Applications -->
